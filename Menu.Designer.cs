@@ -71,6 +71,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataPOS)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -152,20 +153,20 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(1282, 560);
+            this.btnRemove.Location = new System.Drawing.Point(1328, 561);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(124, 30);
+            this.btnRemove.Size = new System.Drawing.Size(124, 29);
             this.btnRemove.TabIndex = 4;
             this.btnRemove.Text = "REMOVE";
             this.btnRemove.UseVisualStyleBackColor = true;
             // 
             // btnOrder
             // 
-            this.btnOrder.Location = new System.Drawing.Point(1282, 607);
+            this.btnOrder.Location = new System.Drawing.Point(1328, 603);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(124, 30);
+            this.btnOrder.Size = new System.Drawing.Size(124, 29);
             this.btnOrder.TabIndex = 5;
             this.btnOrder.Text = "ORDER";
             this.btnOrder.UseVisualStyleBackColor = true;
@@ -173,7 +174,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(881, 612);
+            this.label2.Location = new System.Drawing.Point(853, 612);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
@@ -182,7 +183,7 @@
             // 
             // txtCash
             // 
-            this.txtCash.Location = new System.Drawing.Point(941, 605);
+            this.txtCash.Location = new System.Drawing.Point(913, 605);
             this.txtCash.Margin = new System.Windows.Forms.Padding(2);
             this.txtCash.Multiline = true;
             this.txtCash.Name = "txtCash";
@@ -192,7 +193,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(881, 570);
+            this.label3.Location = new System.Drawing.Point(853, 570);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 20);
@@ -201,7 +202,7 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(941, 562);
+            this.txtTotal.Location = new System.Drawing.Point(913, 562);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
@@ -212,6 +213,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumPurple;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.pictureBox10);
             this.panel1.Controls.Add(this.btnDashboard);
@@ -376,7 +378,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(210, 46);
             this.label12.TabIndex = 17;
-            this.label12.Text = "15.00";
+            this.label12.Text = "35.00";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -411,7 +413,7 @@
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(210, 130);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 8;
             this.pictureBox9.TabStop = false;
             // 
@@ -617,6 +619,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(644, 538);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.PowderBlue;
+            this.label15.Location = new System.Drawing.Point(14, 151);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(151, 16);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Welcome Administrator";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -704,5 +717,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -23,9 +23,9 @@ namespace EATS2GOV2
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
+            if (txtUsername.Text == "admin" && txtPassword.Text == "eats2go")
             {
-                MessageBox.Show("Welcome!");
+                MessageBox.Show("Welcome Admin!");
                 frmMain form2 = new frmMain();
                 form2.Show();
                 this.Hide();
@@ -33,6 +33,24 @@ namespace EATS2GOV2
             else
             {
                 MessageBox.Show("Incorrect. Try again.");
+            }
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '•')
+            {
+                btnHide.BringToFront();
+                txtPassword.PasswordChar = '\0';
+            }
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                btnShow.BringToFront();
+                txtPassword.PasswordChar = '•';
             }
         }
     }

@@ -296,21 +296,21 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(183, 36);
             this.label11.TabIndex = 21;
-            this.label11.Text = "TACOS";
+            this.label11.Text = "Tacos";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.MediumPurple;
             this.label10.Location = new System.Drawing.Point(189, 163);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(183, 36);
             this.label10.TabIndex = 20;
-            this.label10.Text = "Burger and Fries";
+            this.label10.Text = "Chicken Pesto Salad";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -345,7 +345,7 @@
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(182, 158);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 4;
             this.pictureBox9.TabStop = false;
             // 
@@ -444,7 +444,7 @@
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(182, 131);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -490,7 +490,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(254, 50);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Burger and Fries";
+            this.label9.Text = "Chicken Pesto Salad";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox11
@@ -511,7 +511,7 @@
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(254, 206);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 5;
             this.pictureBox12.TabStop = false;
             // 
@@ -526,7 +526,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(254, 48);
             this.label8.TabIndex = 16;
-            this.label8.Text = "TACOS";
+            this.label8.Text = "Pita Wraps";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7

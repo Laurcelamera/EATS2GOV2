@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
@@ -71,7 +72,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataPOS)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -227,8 +227,19 @@
             this.panel1.Location = new System.Drawing.Point(-4, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(187, 688);
+            this.panel1.Size = new System.Drawing.Size(187, 687);
             this.panel1.TabIndex = 11;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.PowderBlue;
+            this.label15.Location = new System.Drawing.Point(14, 151);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(151, 16);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Welcome Administrator";
             // 
             // label13
             // 
@@ -289,7 +300,7 @@
             // picsignOut
             // 
             this.picsignOut.Image = ((System.Drawing.Image)(resources.GetObject("picsignOut.Image")));
-            this.picsignOut.Location = new System.Drawing.Point(47, 647);
+            this.picsignOut.Location = new System.Drawing.Point(47, 643);
             this.picsignOut.Margin = new System.Windows.Forms.Padding(2);
             this.picsignOut.Name = "picsignOut";
             this.picsignOut.Size = new System.Drawing.Size(39, 35);
@@ -331,7 +342,7 @@
             // 
             this.picShutdown.BackColor = System.Drawing.Color.MediumPurple;
             this.picShutdown.Image = ((System.Drawing.Image)(resources.GetObject("picShutdown.Image")));
-            this.picShutdown.Location = new System.Drawing.Point(1, 647);
+            this.picShutdown.Location = new System.Drawing.Point(1, 643);
             this.picShutdown.Margin = new System.Windows.Forms.Padding(2);
             this.picShutdown.Name = "picShutdown";
             this.picShutdown.Size = new System.Drawing.Size(42, 35);
@@ -403,7 +414,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(210, 43);
             this.label4.TabIndex = 9;
-            this.label4.Text = "79.00";
+            this.label4.Text = "119.00";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox9
@@ -527,7 +538,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(210, 43);
             this.label5.TabIndex = 10;
-            this.label5.Text = "90.00";
+            this.label5.Text = "60.00";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -540,7 +551,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(212, 43);
             this.label6.TabIndex = 11;
-            this.label6.Text = "129.00";
+            this.label6.Text = "78.00";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -619,23 +630,12 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(644, 538);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label15.Location = new System.Drawing.Point(14, 151);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(151, 16);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Welcome Administrator";
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(1471, 687);
+            this.ClientSize = new System.Drawing.Size(1491, 685);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);

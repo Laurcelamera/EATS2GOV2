@@ -55,5 +55,12 @@ namespace EATS2GOV2
         {
             Application.Exit();
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
+            this.Hide();
+        }
     }
 }

@@ -87,5 +87,26 @@ namespace EATS2GOV2
             form1.Show();
             this.Hide();
         }
+
+        private void btnFood_Click(object sender, EventArgs e)
+        {
+            frmFood food = new frmFood();
+            food.Show();
+            this.Hide();
+        }
+
+        private void btnDrinks_Click(object sender, EventArgs e)
+        {
+            frmBeverages Drinks = new frmBeverages();
+            Drinks.Show();
+            this.Hide();
+        }
+
+        private void DESSERT_Click(object sender, EventArgs e)
+        {
+            frmDessert Dessert = new frmDessert();
+            Dessert.Show();
+            this.Hide();
+        }
     }
 }

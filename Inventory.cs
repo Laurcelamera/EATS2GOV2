@@ -51,20 +51,17 @@ namespace EATS2GOV2
             }
             conn.Close();
         }
-       
         private void frmInventory_Load(object sender, EventArgs e)
         {
             LoadInventory();
             LoadMenu();
         }
-
         private void btnToMain_Click(object sender, EventArgs e)
         {
             frmMain form2 = new frmMain();
             form2.Show();
             this.Hide();
         }
-
         private void ClearAll()
         {
             txtItemID.Clear();
@@ -81,8 +78,6 @@ namespace EATS2GOV2
             txtItemPrice2.Clear();
             txtItemQuantity2.Clear();
         }
-        
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -95,7 +90,6 @@ namespace EATS2GOV2
             LoadInventory();
             ClearAll();
         }
-
         private void dataInventory_SelectionChanged_1(object sender, EventArgs e)
         {
             if (dataIngredients.SelectedRows.Count > 0)
@@ -193,7 +187,6 @@ namespace EATS2GOV2
                 ClearAll();
             }
         }
-
         private void frmInventory_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

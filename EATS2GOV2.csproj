@@ -89,6 +89,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beverages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Beverages.Designer.cs">
+      <DependentUpon>Beverages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dessert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dessert.Designer.cs">
+      <DependentUpon>Dessert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOOD.Designer.cs">
+      <DependentUpon>FOOD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +139,15 @@
     <Compile Include="Sales.Designer.cs">
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Beverages.resx">
+      <DependentUpon>Beverages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dessert.resx">
+      <DependentUpon>Dessert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOOD.resx">
+      <DependentUpon>FOOD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

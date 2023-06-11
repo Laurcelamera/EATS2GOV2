@@ -7,21 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace EATS2GOV2
 {
     public partial class frmDessert : Form
     {
+        public string connectionString =
+            "datasource=localhost;" +
+            "port=3306;" +
+            "database=eats2go;" +
+            "username=root;" +
+            "password='';";
+        MySqlCommand cmd;
+        MySqlDataReader rdr;
+        private MySqlConnection GetConnection()
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                return connection;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to the database: " + ex.Message);
+                return null;
+            }
+        }
         public frmDessert()
         {
             InitializeComponent();
         }
-        private double halohaloPrice = 69.00;
-        private double carSundaePrice = 35.00;
-        private double strawSundaePrice = 70;
-        private double chCakePrice = 80;
-        private double bluPiePrice = 110;
-        private double bTartPrice = 59.00;
+        private double halohaloPrice =150.00;
+        private double carSundaePrice = 40.00;
+        private double strawSundaePrice = 40.00;
+        private double chCakePrice = 65.00;
+        private double bluPiePrice = 65.00;
+        private double bTartPrice = 30.00;
         private double halohaloTotalPrice;
         private double carSundaeTotalPrice;
         private double strawSundaeTotalPrice;
@@ -95,7 +117,7 @@ namespace EATS2GOV2
             int quantity = Convert.ToInt32(numBtarts.Value);
             bTartTotalPrice = bTartPrice * quantity;
             totalOrderPrice = bTartTotalPrice;
-            AddItemToReceipt("EATS2GO Pita Wraps", quantity, bTartPrice, bTartTotalPrice);
+            AddItemToReceipt("BUTTER TARTS", quantity, bTartPrice, bTartTotalPrice);
 
         }
         private double CalculateTotalOrderPrice()
@@ -116,7 +138,7 @@ namespace EATS2GOV2
 
             int chCakeQuantity = Convert.ToInt32(numChCake.Value);
             double chCakeTotalPrice = chCakePrice * chCakeQuantity;
-            totalOrderPrice += chCakePrice;
+            totalOrderPrice += chCakeTotalPrice;
 
             int bluePieQuantity = Convert.ToInt32(numBlPie.Value);
             double bluePieTotalPrice = bluPiePrice * bluePieQuantity;
@@ -169,10 +191,36 @@ namespace EATS2GOV2
                 txtReceipt.AppendText("Insufficient cash. Please provide more funds." + Environment.NewLine);
             }
             txtReceipt.AppendText(lineOfAsterisks);
+            InsertItemToDatabase("HALO-HALO", Convert.ToInt32(numHalo.Value), halohaloPrice);
+            InsertItemToDatabase("CARAMEL SUNDAE", Convert.ToInt32(numCaSundae.Value), carSundaePrice);
+            InsertItemToDatabase("STRAWBERRY SUNDAE", Convert.ToInt32(numStSundae.Value), strawSundaePrice);
+            InsertItemToDatabase("CHEESE CAKE", Convert.ToInt32(numChCake.Value), chCakePrice);
+            InsertItemToDatabase("BLUEBERRY PIE", Convert.ToInt32(numBlPie.Value), bluPiePrice);
+            InsertItemToDatabase("BUTTER TARTS", Convert.ToInt32(numBtarts.Value), bTartPrice);
+
+            frmSales salesForm = new frmSales();
+            salesForm.Show();
+        }
+        private void InsertItemToDatabase(string item, int quantity, double price)
+        {
+            // Insert into the database
+            using (MySqlConnection connection = GetConnection())
+            {
+                string query = "INSERT INTO sales (item_name, price, quantity, transaction_date) VALUES (@itemName, @price, @quantity, @transactionDate)";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                if (quantity > 0)
+                {
+                    command.Parameters.AddWithValue("@itemName", item);
+                    command.Parameters.AddWithValue("@price", price);
+                    command.Parameters.AddWithValue("@quantity", quantity);
+                    command.Parameters.AddWithValue("@transactionDate", DateTime.Now);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
         private void btnFood_Click(object sender, EventArgs e)
         {
-            frmFood food = new frmFood();
+            frmSales food = new frmSales();
             food.Show();
             this.Hide();
         }

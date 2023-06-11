@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace EATS2GOV2
 {
     public partial class frmFood : Form
     {
+        public string connectionString = 
+            "datasource=localhost;" +
+            "port=3306;" +
+            "database=eats2go;" +
+            "username=root;" +
+            "password='';";
+        private MySqlConnection GetConnection()
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                return connection;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to the database: " + ex.Message);
+                return null;
+            }
+        }
+
         private double pitaPrice = 69.00;
         private double sandPrice = 35.00;
         private double tacoPrice = 70;
@@ -140,6 +163,17 @@ namespace EATS2GOV2
                 txtReceipt.AppendText("Insufficient cash. Please provide more funds." + Environment.NewLine);
             }
             txtReceipt.AppendText(lineOfAsterisks);
+            // Insert individual items into the database
+            InsertItemToDatabase("EATS2GO Pita Wraps", Convert.ToInt32(numPita.Value), pitaPrice);
+            InsertItemToDatabase("EATS2GO Sandwich", Convert.ToInt32(numSand.Value), sandPrice);
+            InsertItemToDatabase("EATS2GO TACO", Convert.ToInt32(numTaco.Value), tacoPrice);
+            InsertItemToDatabase("EGG DROP SANDWICH", Convert.ToInt32(numEgg.Value), eggdropPrice);
+            InsertItemToDatabase("EATS2GO CHICKEN PESTO", Convert.ToInt32(numPesto.Value), pestoPrice);
+            InsertItemToDatabase("CORN DOG", Convert.ToInt32(numCornd.Value), corndogPrice);
+
+            frmSales salesForm = new frmSales();
+            salesForm.Show();
+
         }
 
         private void btnTotal_Click(object sender, EventArgs e)
@@ -157,6 +191,7 @@ namespace EATS2GOV2
             txtReceipt.AppendText(lineOfAsterisks);
             totalOrderPrice = 0;
         }
+
         public frmFood()
         {
             InitializeComponent();
@@ -182,6 +217,26 @@ namespace EATS2GOV2
             frmDessert Dessert = new frmDessert();
             Dessert.Show();
             this.Hide();
+        }
+
+        private void InsertItemToDatabase(string item, int quantity, double price)
+        {
+            // Insert into the database
+            using (MySqlConnection connection = GetConnection())
+            {
+                
+                string query = "INSERT INTO sales (item_name, price, quantity, transaction_date) VALUES (@itemName, @price, @quantity, @transactionDate)";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                if (quantity > 0)
+                {
+                    command.Parameters.AddWithValue("@itemName", item);
+                    command.Parameters.AddWithValue("@price", price);
+                    command.Parameters.AddWithValue("@quantity", quantity);
+                    command.Parameters.AddWithValue("@transactionDate", DateTime.Now);
+                    command.ExecuteNonQuery();
+                }
+                
+            }
         }
     }
 }

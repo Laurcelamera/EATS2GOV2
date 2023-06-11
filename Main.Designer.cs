@@ -41,6 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picsignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShutdown)).BeginInit();
             this.panel1.SuspendLayout();
@@ -50,10 +51,10 @@
             // picsignOut
             // 
             this.picsignOut.Image = ((System.Drawing.Image)(resources.GetObject("picsignOut.Image")));
-            this.picsignOut.Location = new System.Drawing.Point(47, 645);
+            this.picsignOut.Location = new System.Drawing.Point(59, 806);
             this.picsignOut.Margin = new System.Windows.Forms.Padding(2);
             this.picsignOut.Name = "picsignOut";
-            this.picsignOut.Size = new System.Drawing.Size(39, 35);
+            this.picsignOut.Size = new System.Drawing.Size(49, 44);
             this.picsignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picsignOut.TabIndex = 6;
             this.picsignOut.TabStop = false;
@@ -63,10 +64,10 @@
             // 
             this.picShutdown.BackColor = System.Drawing.Color.MediumPurple;
             this.picShutdown.Image = ((System.Drawing.Image)(resources.GetObject("picShutdown.Image")));
-            this.picShutdown.Location = new System.Drawing.Point(1, 645);
+            this.picShutdown.Location = new System.Drawing.Point(1, 806);
             this.picShutdown.Margin = new System.Windows.Forms.Padding(2);
             this.picShutdown.Name = "picShutdown";
-            this.picShutdown.Size = new System.Drawing.Size(42, 35);
+            this.picShutdown.Size = new System.Drawing.Size(52, 44);
             this.picShutdown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picShutdown.TabIndex = 5;
             this.picShutdown.TabStop = false;
@@ -79,10 +80,10 @@
             this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSales.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSales.ForeColor = System.Drawing.Color.PowderBlue;
-            this.btnSales.Location = new System.Drawing.Point(-2, 356);
+            this.btnSales.Location = new System.Drawing.Point(-2, 445);
             this.btnSales.Margin = new System.Windows.Forms.Padding(2);
             this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(185, 47);
+            this.btnSales.Size = new System.Drawing.Size(231, 59);
             this.btnSales.TabIndex = 3;
             this.btnSales.Text = "SALES";
             this.btnSales.UseVisualStyleBackColor = false;
@@ -95,10 +96,10 @@
             this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventory.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.ForeColor = System.Drawing.Color.PowderBlue;
-            this.btnInventory.Location = new System.Drawing.Point(-2, 432);
+            this.btnInventory.Location = new System.Drawing.Point(-2, 540);
             this.btnInventory.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(182, 47);
+            this.btnInventory.Size = new System.Drawing.Size(228, 59);
             this.btnInventory.TabIndex = 2;
             this.btnInventory.Text = "INVENTORY";
             this.btnInventory.UseVisualStyleBackColor = false;
@@ -111,10 +112,10 @@
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.PowderBlue;
-            this.btnMenu.Location = new System.Drawing.Point(-2, 280);
+            this.btnMenu.Location = new System.Drawing.Point(-2, 350);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(185, 47);
+            this.btnMenu.Size = new System.Drawing.Size(231, 59);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "POS";
             this.btnMenu.UseVisualStyleBackColor = false;
@@ -126,10 +127,10 @@
             this.label1.BackColor = System.Drawing.Color.MediumPurple;
             this.label1.Font = new System.Drawing.Font("Montserrat Medium", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 41);
+            this.label1.Size = new System.Drawing.Size(206, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "EATS2GO";
             // 
@@ -148,10 +149,10 @@
             this.panel1.Controls.Add(this.picShutdown);
             this.panel1.Controls.Add(this.btnSales);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(0, -4);
+            this.panel1.Location = new System.Drawing.Point(0, -5);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 750);
+            this.panel1.Size = new System.Drawing.Size(224, 937);
             this.panel1.TabIndex = 7;
             // 
             // label13
@@ -159,9 +160,10 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label13.Location = new System.Drawing.Point(14, 151);
+            this.label13.Location = new System.Drawing.Point(18, 189);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(151, 16);
+            this.label13.Size = new System.Drawing.Size(188, 21);
             this.label13.TabIndex = 16;
             this.label13.Text = "Welcome Administrator";
             // 
@@ -171,20 +173,20 @@
             this.label6.BackColor = System.Drawing.Color.MediumPurple;
             this.label6.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label6.Location = new System.Drawing.Point(28, 52);
+            this.label6.Location = new System.Drawing.Point(35, 65);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 26);
+            this.label6.Size = new System.Drawing.Size(154, 32);
             this.label6.TabIndex = 10;
             this.label6.Text = "POS System";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(47, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 100);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 69);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -197,10 +199,10 @@
             this.btnDashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.PowderBlue;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(-2, 210);
+            this.btnDashboard.Location = new System.Drawing.Point(-2, 262);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(182, 47);
+            this.btnDashboard.Size = new System.Drawing.Size(228, 59);
             this.btnDashboard.TabIndex = 8;
             this.btnDashboard.Text = "DASHBOARD";
             this.btnDashboard.UseVisualStyleBackColor = false;
@@ -212,19 +214,33 @@
             this.label7.BackColor = System.Drawing.Color.Ivory;
             this.label7.Font = new System.Drawing.Font("Montserrat SemiBold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label7.Location = new System.Drawing.Point(202, 8);
+            this.label7.Location = new System.Drawing.Point(252, 10);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(345, 88);
+            this.label7.Size = new System.Drawing.Size(432, 111);
             this.label7.TabIndex = 15;
             this.label7.Text = "EATS2GO";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Ivory;
+            this.label2.Font = new System.Drawing.Font("Montserrat Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.PowderBlue;
+            this.label2.Location = new System.Drawing.Point(253, 185);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(275, 32);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Top Selling Products";
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(1094, 676);
+            this.ClientSize = new System.Drawing.Size(1368, 845);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
@@ -258,5 +274,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label2;
     }
 }

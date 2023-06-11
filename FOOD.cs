@@ -235,7 +235,6 @@ namespace EATS2GOV2
                     command.Parameters.AddWithValue("@transactionDate", DateTime.Now);
                     command.ExecuteNonQuery();
                 }
-                
             }
         }
     }

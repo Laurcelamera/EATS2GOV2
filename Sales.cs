@@ -19,7 +19,7 @@ namespace EATS2GOV2
         MySqlDataReader rdr;
         MySqlConnection conn = new MySqlConnection();
       public string connectionString = "datasource=localhost;port=3306;database=eats2go;username=root;password='';";
-
+        private decimal totalSales = 0;
         public frmSales()
         {
             InitializeComponent();
@@ -55,10 +55,22 @@ namespace EATS2GOV2
                 adapter.Fill(salesData);
                 dataSales.Rows.Clear();
 
+                decimal totalSales = 0; // Calculate the total sales
+
                 foreach (DataRow row in salesData.Rows)
                 {
-                    dataSales.Rows.Add(row[0],row[1],row[2],row[3],row[4]);
+                    dataSales.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+
+                    // Calculate the total sales
+                    decimal price, quantity;
+                    if (decimal.TryParse(row[2].ToString(), out price) && decimal.TryParse(row[3].ToString(), out quantity))
+                    {
+                        totalSales += price * quantity;
+                    }
                 }
+
+                // Display the total sales in the textbox
+                txtTotalSales.Text = totalSales.ToString("0.00");
             }
         }
 
@@ -79,6 +91,7 @@ namespace EATS2GOV2
         {
             DateTime fromDate = dateTimeFrom.Value;
             DateTime toDate = dateTimeTo.Value;
+
             GetSalesData(fromDate, toDate);
         }
 

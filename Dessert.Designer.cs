@@ -116,7 +116,7 @@
             this.DESSERT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DESSERT.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DESSERT.ForeColor = System.Drawing.Color.PowderBlue;
-            this.DESSERT.Location = new System.Drawing.Point(-1, 410);
+            this.DESSERT.Location = new System.Drawing.Point(-1, 397);
             this.DESSERT.Margin = new System.Windows.Forms.Padding(2);
             this.DESSERT.Name = "DESSERT";
             this.DESSERT.Size = new System.Drawing.Size(176, 48);
@@ -147,7 +147,7 @@
             this.btnFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFood.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFood.ForeColor = System.Drawing.Color.PowderBlue;
-            this.btnFood.Location = new System.Drawing.Point(-2, 285);
+            this.btnFood.Location = new System.Drawing.Point(-2, 295);
             this.btnFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnFood.Name = "btnFood";
             this.btnFood.Size = new System.Drawing.Size(178, 48);
@@ -236,7 +236,7 @@
             // 
             this.txtCash.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCash.Location = new System.Drawing.Point(910, 599);
-            this.txtCash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCash.Margin = new System.Windows.Forms.Padding(2);
             this.txtCash.Multiline = true;
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(91, 34);
@@ -246,7 +246,7 @@
             // 
             this.btnTotal.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotal.Location = new System.Drawing.Point(1099, 554);
-            this.btnTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTotal.Margin = new System.Windows.Forms.Padding(2);
             this.btnTotal.Name = "btnTotal";
             this.btnTotal.Size = new System.Drawing.Size(90, 40);
             this.btnTotal.TabIndex = 99;
@@ -258,7 +258,7 @@
             // 
             this.btnCompleteOrder.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompleteOrder.Location = new System.Drawing.Point(1005, 597);
-            this.btnCompleteOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCompleteOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompleteOrder.Name = "btnCompleteOrder";
             this.btnCompleteOrder.Size = new System.Drawing.Size(186, 36);
             this.btnCompleteOrder.TabIndex = 98;
@@ -270,7 +270,7 @@
             // 
             this.btnClear.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(1005, 555);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 40);
             this.btnClear.TabIndex = 97;
@@ -283,7 +283,7 @@
             this.txtReceipt.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtReceipt.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReceipt.Location = new System.Drawing.Point(910, 133);
-            this.txtReceipt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReceipt.Margin = new System.Windows.Forms.Padding(2);
             this.txtReceipt.Name = "txtReceipt";
             this.txtReceipt.ReadOnly = true;
             this.txtReceipt.Size = new System.Drawing.Size(281, 418);
@@ -317,7 +317,7 @@
             // btnBtarts
             // 
             this.btnBtarts.Location = new System.Drawing.Point(672, 525);
-            this.btnBtarts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBtarts.Margin = new System.Windows.Forms.Padding(2);
             this.btnBtarts.Name = "btnBtarts";
             this.btnBtarts.Size = new System.Drawing.Size(126, 29);
             this.btnBtarts.TabIndex = 93;
@@ -329,7 +329,7 @@
             // 
             this.numBtarts.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBtarts.Location = new System.Drawing.Point(627, 526);
-            this.numBtarts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numBtarts.Margin = new System.Windows.Forms.Padding(2);
             this.numBtarts.Name = "numBtarts";
             this.numBtarts.Size = new System.Drawing.Size(41, 27);
             this.numBtarts.TabIndex = 92;
@@ -339,7 +339,7 @@
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(626, 352);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(164, 128);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,7 +373,7 @@
             // btnStSundae
             // 
             this.btnStSundae.Location = new System.Drawing.Point(672, 308);
-            this.btnStSundae.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStSundae.Margin = new System.Windows.Forms.Padding(2);
             this.btnStSundae.Name = "btnStSundae";
             this.btnStSundae.Size = new System.Drawing.Size(126, 29);
             this.btnStSundae.TabIndex = 88;
@@ -385,7 +385,7 @@
             // 
             this.numStSundae.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numStSundae.Location = new System.Drawing.Point(628, 309);
-            this.numStSundae.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numStSundae.Margin = new System.Windows.Forms.Padding(2);
             this.numStSundae.Name = "numStSundae";
             this.numStSundae.Size = new System.Drawing.Size(41, 27);
             this.numStSundae.TabIndex = 87;
@@ -395,7 +395,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(628, 133);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(164, 128);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -429,7 +429,7 @@
             // btnBpie
             // 
             this.btnBpie.Location = new System.Drawing.Point(465, 525);
-            this.btnBpie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBpie.Margin = new System.Windows.Forms.Padding(2);
             this.btnBpie.Name = "btnBpie";
             this.btnBpie.Size = new System.Drawing.Size(126, 29);
             this.btnBpie.TabIndex = 83;
@@ -441,7 +441,7 @@
             // 
             this.numBlPie.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numBlPie.Location = new System.Drawing.Point(420, 527);
-            this.numBlPie.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numBlPie.Margin = new System.Windows.Forms.Padding(2);
             this.numBlPie.Name = "numBlPie";
             this.numBlPie.Size = new System.Drawing.Size(41, 27);
             this.numBlPie.TabIndex = 82;
@@ -451,7 +451,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(420, 352);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(164, 128);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -485,7 +485,7 @@
             // btnCheese
             // 
             this.btnCheese.Location = new System.Drawing.Point(248, 526);
-            this.btnCheese.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheese.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheese.Name = "btnCheese";
             this.btnCheese.Size = new System.Drawing.Size(126, 29);
             this.btnCheese.TabIndex = 78;
@@ -497,7 +497,7 @@
             // 
             this.numChCake.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numChCake.Location = new System.Drawing.Point(203, 527);
-            this.numChCake.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numChCake.Margin = new System.Windows.Forms.Padding(2);
             this.numChCake.Name = "numChCake";
             this.numChCake.Size = new System.Drawing.Size(41, 27);
             this.numChCake.TabIndex = 77;
@@ -507,7 +507,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(210, 352);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(164, 128);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -541,7 +541,7 @@
             // btnCaSundae
             // 
             this.btnCaSundae.Location = new System.Drawing.Point(465, 308);
-            this.btnCaSundae.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCaSundae.Margin = new System.Windows.Forms.Padding(2);
             this.btnCaSundae.Name = "btnCaSundae";
             this.btnCaSundae.Size = new System.Drawing.Size(126, 29);
             this.btnCaSundae.TabIndex = 73;
@@ -553,7 +553,7 @@
             // 
             this.numCaSundae.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCaSundae.Location = new System.Drawing.Point(420, 309);
-            this.numCaSundae.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numCaSundae.Margin = new System.Windows.Forms.Padding(2);
             this.numCaSundae.Name = "numCaSundae";
             this.numCaSundae.Size = new System.Drawing.Size(41, 27);
             this.numCaSundae.TabIndex = 72;
@@ -563,7 +563,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(420, 133);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(164, 128);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -597,7 +597,7 @@
             // btnHalo
             // 
             this.btnHalo.Location = new System.Drawing.Point(246, 308);
-            this.btnHalo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHalo.Margin = new System.Windows.Forms.Padding(2);
             this.btnHalo.Name = "btnHalo";
             this.btnHalo.Size = new System.Drawing.Size(126, 29);
             this.btnHalo.TabIndex = 68;
@@ -609,7 +609,7 @@
             // 
             this.numHalo.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHalo.Location = new System.Drawing.Point(201, 309);
-            this.numHalo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numHalo.Margin = new System.Windows.Forms.Padding(2);
             this.numHalo.Name = "numHalo";
             this.numHalo.Size = new System.Drawing.Size(41, 27);
             this.numHalo.TabIndex = 67;
@@ -619,7 +619,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(210, 133);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(164, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -669,7 +669,7 @@
             this.Controls.Add(this.numHalo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDessert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dessert";

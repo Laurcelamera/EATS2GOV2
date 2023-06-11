@@ -99,10 +99,10 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.picShutdown);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Location = new System.Drawing.Point(-5, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(187, 687);
+            this.panel1.Size = new System.Drawing.Size(233, 858);
             this.panel1.TabIndex = 11;
             // 
             // DESSERT
@@ -112,10 +112,10 @@
             this.DESSERT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DESSERT.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DESSERT.ForeColor = System.Drawing.Color.PowderBlue;
-            this.DESSERT.Location = new System.Drawing.Point(-1, 403);
+            this.DESSERT.Location = new System.Drawing.Point(-1, 489);
             this.DESSERT.Margin = new System.Windows.Forms.Padding(2);
             this.DESSERT.Name = "DESSERT";
-            this.DESSERT.Size = new System.Drawing.Size(188, 47);
+            this.DESSERT.Size = new System.Drawing.Size(235, 59);
             this.DESSERT.TabIndex = 15;
             this.DESSERT.Text = "DESSERT";
             this.DESSERT.UseVisualStyleBackColor = false;
@@ -128,10 +128,10 @@
             this.btnDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDrinks.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDrinks.ForeColor = System.Drawing.Color.PowderBlue;
-            this.btnDrinks.Location = new System.Drawing.Point(-2, 341);
+            this.btnDrinks.Location = new System.Drawing.Point(-2, 426);
             this.btnDrinks.Margin = new System.Windows.Forms.Padding(2);
             this.btnDrinks.Name = "btnDrinks";
-            this.btnDrinks.Size = new System.Drawing.Size(188, 47);
+            this.btnDrinks.Size = new System.Drawing.Size(235, 59);
             this.btnDrinks.TabIndex = 15;
             this.btnDrinks.Text = "BEVERAGES";
             this.btnDrinks.UseVisualStyleBackColor = false;
@@ -144,10 +144,10 @@
             this.btnFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFood.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFood.ForeColor = System.Drawing.Color.PowderBlue;
-            this.btnFood.Location = new System.Drawing.Point(1, 281);
+            this.btnFood.Location = new System.Drawing.Point(2, 363);
             this.btnFood.Margin = new System.Windows.Forms.Padding(2);
             this.btnFood.Name = "btnFood";
-            this.btnFood.Size = new System.Drawing.Size(188, 47);
+            this.btnFood.Size = new System.Drawing.Size(235, 59);
             this.btnFood.TabIndex = 18;
             this.btnFood.Text = "FOOD";
             this.btnFood.UseVisualStyleBackColor = false;
@@ -156,11 +156,12 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label15.Location = new System.Drawing.Point(14, 151);
+            this.label15.Location = new System.Drawing.Point(4, 188);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(151, 16);
+            this.label15.Size = new System.Drawing.Size(222, 24);
             this.label15.TabIndex = 17;
             this.label15.Text = "Welcome Administrator";
             // 
@@ -168,22 +169,22 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.MediumPurple;
-            this.label13.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Univa Nova", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label13.Location = new System.Drawing.Point(28, 52);
+            this.label13.Location = new System.Drawing.Point(35, 65);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(129, 26);
+            this.label13.Size = new System.Drawing.Size(152, 27);
             this.label13.TabIndex = 10;
             this.label13.Text = "POS System";
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(47, 80);
+            this.pictureBox10.Location = new System.Drawing.Point(59, 100);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(78, 69);
+            this.pictureBox10.Size = new System.Drawing.Size(98, 86);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 9;
             this.pictureBox10.TabStop = false;
@@ -196,10 +197,10 @@
             this.btnDashboard.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.PowderBlue;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(-2, 210);
+            this.btnDashboard.Location = new System.Drawing.Point(-2, 262);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(188, 47);
+            this.btnDashboard.Size = new System.Drawing.Size(235, 59);
             this.btnDashboard.TabIndex = 8;
             this.btnDashboard.Text = "DASHBOARD";
             this.btnDashboard.UseVisualStyleBackColor = false;
@@ -208,10 +209,10 @@
             // picsignOut
             // 
             this.picsignOut.Image = ((System.Drawing.Image)(resources.GetObject("picsignOut.Image")));
-            this.picsignOut.Location = new System.Drawing.Point(47, 643);
+            this.picsignOut.Location = new System.Drawing.Point(59, 804);
             this.picsignOut.Margin = new System.Windows.Forms.Padding(2);
             this.picsignOut.Name = "picsignOut";
-            this.picsignOut.Size = new System.Drawing.Size(39, 35);
+            this.picsignOut.Size = new System.Drawing.Size(49, 44);
             this.picsignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picsignOut.TabIndex = 6;
             this.picsignOut.TabStop = false;
@@ -221,12 +222,12 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.MediumPurple;
-            this.label14.Font = new System.Drawing.Font("Montserrat Medium", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Montserrat", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label14.Location = new System.Drawing.Point(10, 11);
+            this.label14.Location = new System.Drawing.Point(12, 14);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(168, 41);
+            this.label14.Size = new System.Drawing.Size(202, 51);
             this.label14.TabIndex = 1;
             this.label14.Text = "EATS2GO";
             // 
@@ -234,10 +235,10 @@
             // 
             this.picShutdown.BackColor = System.Drawing.Color.MediumPurple;
             this.picShutdown.Image = ((System.Drawing.Image)(resources.GetObject("picShutdown.Image")));
-            this.picShutdown.Location = new System.Drawing.Point(1, 643);
+            this.picShutdown.Location = new System.Drawing.Point(1, 804);
             this.picShutdown.Margin = new System.Windows.Forms.Padding(2);
             this.picShutdown.Name = "picShutdown";
-            this.picShutdown.Size = new System.Drawing.Size(42, 35);
+            this.picShutdown.Size = new System.Drawing.Size(52, 44);
             this.picShutdown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picShutdown.TabIndex = 5;
             this.picShutdown.TabStop = false;
@@ -247,12 +248,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Ivory;
-            this.label1.Font = new System.Drawing.Font("Montserrat SemiBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label1.Location = new System.Drawing.Point(194, 21);
+            this.label1.Location = new System.Drawing.Point(242, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(426, 66);
+            this.label1.Size = new System.Drawing.Size(535, 83);
             this.label1.TabIndex = 12;
             this.label1.Text = "EATS2GO MENU";
             // 
@@ -264,7 +265,7 @@
             this.tableLayoutPanel3.Controls.Add(this.pictureBox11, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.pictureBox12, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.label8, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(809, 137);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1011, 171);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
@@ -272,19 +273,19 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.334365F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.66564F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.334364F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(258, 518);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(322, 648);
             this.tableLayoutPanel3.TabIndex = 21;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label9.Location = new System.Drawing.Point(2, 468);
+            this.label9.Location = new System.Drawing.Point(2, 586);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(254, 50);
+            this.label9.Size = new System.Drawing.Size(318, 62);
             this.label9.TabIndex = 17;
             this.label9.Text = "Chicken Pesto Salad";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,7 +296,7 @@
             this.pictureBox11.Location = new System.Drawing.Point(2, 2);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(254, 206);
+            this.pictureBox11.Size = new System.Drawing.Size(318, 258);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 4;
             this.pictureBox11.TabStop = false;
@@ -303,10 +304,10 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(2, 260);
+            this.pictureBox12.Location = new System.Drawing.Point(2, 325);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(254, 206);
+            this.pictureBox12.Size = new System.Drawing.Size(318, 258);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 5;
             this.pictureBox12.TabStop = false;
@@ -315,12 +316,12 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label8.Location = new System.Drawing.Point(2, 210);
+            this.label8.Location = new System.Drawing.Point(2, 263);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(254, 48);
+            this.label8.Size = new System.Drawing.Size(318, 60);
             this.label8.TabIndex = 16;
             this.label8.Text = "Pita Wraps";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,12 +329,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label5.Location = new System.Drawing.Point(805, 113);
+            this.label5.Location = new System.Drawing.Point(1006, 141);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 22);
+            this.label5.Size = new System.Drawing.Size(146, 27);
             this.label5.TabIndex = 20;
             this.label5.Text = "What\'s New!";
             // 
@@ -349,23 +350,23 @@
             this.tableLayoutPanel2.Controls.Add(this.pictureBox4, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox3, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox2, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(201, 137);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(251, 171);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(560, 273);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(700, 341);
             this.tableLayoutPanel2.TabIndex = 19;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(374, 138);
+            this.pictureBox7.Location = new System.Drawing.Point(468, 172);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(182, 131);
+            this.pictureBox7.Size = new System.Drawing.Size(228, 164);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 5;
             this.pictureBox7.TabStop = false;
@@ -373,10 +374,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(188, 138);
+            this.pictureBox6.Location = new System.Drawing.Point(235, 172);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(182, 131);
+            this.pictureBox6.Size = new System.Drawing.Size(228, 164);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
@@ -384,10 +385,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(2, 138);
+            this.pictureBox5.Location = new System.Drawing.Point(2, 172);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(182, 131);
+            this.pictureBox5.Size = new System.Drawing.Size(228, 164);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
@@ -395,10 +396,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(374, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(468, 2);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(182, 131);
+            this.pictureBox4.Size = new System.Drawing.Size(228, 164);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -406,10 +407,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(188, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(235, 2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(182, 131);
+            this.pictureBox3.Size = new System.Drawing.Size(228, 164);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -420,7 +421,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(2, 2);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(182, 131);
+            this.pictureBox2.Size = new System.Drawing.Size(228, 164);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -428,22 +429,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label4.Location = new System.Drawing.Point(201, 113);
+            this.label4.Location = new System.Drawing.Point(251, 141);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 22);
+            this.label4.Size = new System.Drawing.Size(211, 27);
             this.label4.TabIndex = 18;
             this.label4.Text = "Featured Products";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(853, 137);
+            this.label3.Location = new System.Drawing.Point(1066, 171);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.Size = new System.Drawing.Size(0, 24);
             this.label3.TabIndex = 17;
             // 
             // tableLayoutPanel1
@@ -458,25 +459,25 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox8, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox9, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(198, 442);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(248, 552);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.10316F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.89684F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(562, 199);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(702, 249);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label11.Location = new System.Drawing.Point(2, 163);
+            this.label11.Location = new System.Drawing.Point(2, 204);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(183, 36);
+            this.label11.Size = new System.Drawing.Size(229, 45);
             this.label11.TabIndex = 21;
             this.label11.Text = "Tacos";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -485,12 +486,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Montserrat Medium", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label10.Location = new System.Drawing.Point(189, 163);
+            this.label10.Location = new System.Drawing.Point(235, 204);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(183, 36);
+            this.label10.Size = new System.Drawing.Size(230, 45);
             this.label10.TabIndex = 20;
             this.label10.Text = "Chicken Pesto Salad";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -501,10 +502,10 @@
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label12.Location = new System.Drawing.Point(376, 163);
+            this.label12.Location = new System.Drawing.Point(469, 204);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(184, 36);
+            this.label12.Size = new System.Drawing.Size(231, 45);
             this.label12.TabIndex = 19;
             this.label12.Text = "Buko Juice";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -515,7 +516,7 @@
             this.pictureBox8.Location = new System.Drawing.Point(2, 2);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(182, 158);
+            this.pictureBox8.Size = new System.Drawing.Size(228, 198);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
@@ -523,10 +524,10 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(189, 2);
+            this.pictureBox9.Location = new System.Drawing.Point(235, 2);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(182, 158);
+            this.pictureBox9.Size = new System.Drawing.Size(228, 198);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 4;
             this.pictureBox9.TabStop = false;
@@ -534,10 +535,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(376, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(469, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 158);
+            this.pictureBox1.Size = new System.Drawing.Size(228, 198);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -545,21 +546,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label2.Location = new System.Drawing.Point(197, 418);
+            this.label2.Location = new System.Drawing.Point(246, 522);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 22);
+            this.label2.Size = new System.Drawing.Size(211, 27);
             this.label2.TabIndex = 15;
             this.label2.Text = "Popular This Week";
             // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(1085, 684);
+            this.ClientSize = new System.Drawing.Size(1356, 855);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel2);

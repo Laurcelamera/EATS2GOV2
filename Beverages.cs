@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,31 @@ namespace EATS2GOV2
 {
     public partial class frmBeverages : Form
     {
+        public string connectionString =
+            "datasource=localhost;" +
+            "port=3306;" +
+            "database=eats2go;" +
+            "username=root;" +
+            "password='';";
+        private MySqlConnection GetConnection()
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                return connection;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error connecting to the database: " + ex.Message);
+                return null;
+            }
+        }
         public frmBeverages()
         {
             InitializeComponent();
         }
+
         private double bukoPrice = 25.00;
         private double cranPrice = 45.00;
         private double lemonPrice = 60.00;
@@ -32,6 +54,7 @@ namespace EATS2GOV2
 
         private string headerText = "\t\tEATS2GO FOODS" + Environment.NewLine;
         private string lineOfAsterisks = "\t************************************************" + Environment.NewLine;
+
         private void btnFood_Click(object sender, EventArgs e)
         {
             frmFood food = new frmFood();
@@ -191,6 +214,31 @@ namespace EATS2GOV2
                 txtReceipt.AppendText("Insufficient cash. Please provide more funds." + Environment.NewLine);
             }
             txtReceipt.AppendText(lineOfAsterisks);
+            InsertItemToDatabase("BUKO JUICE", Convert.ToInt32(numBJ.Value), bukoPrice);
+            InsertItemToDatabase("CRANBERRY JUICE", Convert.ToInt32(numCJ.Value), cranPrice);
+            InsertItemToDatabase("LEMONADE", Convert.ToInt32(numLemonade.Value), lemonPrice);
+            InsertItemToDatabase("ORANGE JUICE", Convert.ToInt32(numOJ.Value), orangePrice);
+            InsertItemToDatabase("ICED TEA", Convert.ToInt32(numIT.Value), icedteaPrice);
+            InsertItemToDatabase("WATER", Convert.ToInt32(numWater.Value), waterPrice);
+
+        }
+        private void InsertItemToDatabase(string item, int quantity, double price)
+        {
+            // Insert into the database
+            using (MySqlConnection connection = GetConnection())
+            {
+
+                string query = "INSERT INTO sales (item_name, price, quantity, transaction_date) VALUES (@itemName, @price, @quantity, @transactionDate)";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                if (quantity > 0)
+                {
+                    command.Parameters.AddWithValue("@itemName", item);
+                    command.Parameters.AddWithValue("@price", price);
+                    command.Parameters.AddWithValue("@quantity", quantity);
+                    command.Parameters.AddWithValue("@transactionDate", DateTime.Now);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

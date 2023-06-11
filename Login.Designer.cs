@@ -44,7 +44,8 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(214, 128);
+            this.txtUsername.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(215, 131);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
@@ -53,7 +54,8 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(214, 177);
+            this.txtPassword.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(215, 180);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -64,37 +66,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 134);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(96, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(113, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "USERNAME:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 183);
+            this.label2.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(93, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 16);
+            this.label2.Size = new System.Drawing.Size(116, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "PASSWORD:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label3.Location = new System.Drawing.Point(246, 94);
+            this.label3.Location = new System.Drawing.Point(246, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 26);
+            this.label3.Size = new System.Drawing.Size(91, 32);
             this.label3.TabIndex = 4;
             this.label3.Text = "LOGIN";
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnLogin.Font = new System.Drawing.Font("Univa Nova", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLogin.Location = new System.Drawing.Point(251, 210);
+            this.btnLogin.Location = new System.Drawing.Point(252, 213);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 36);
@@ -106,18 +111,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat Medium", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Montserrat", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label4.Location = new System.Drawing.Point(222, 62);
+            this.label4.Location = new System.Drawing.Point(215, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 32);
+            this.label4.Size = new System.Drawing.Size(154, 39);
             this.label4.TabIndex = 6;
             this.label4.Text = "EATS2GO";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(260, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(264, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,7 +135,7 @@
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShow.ForeColor = System.Drawing.Color.White;
             this.btnShow.Image = ((System.Drawing.Image)(resources.GetObject("btnShow.Image")));
-            this.btnShow.Location = new System.Drawing.Point(341, 178);
+            this.btnShow.Location = new System.Drawing.Point(342, 181);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(30, 25);
             this.btnShow.TabIndex = 8;
@@ -143,7 +148,7 @@
             this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHide.ForeColor = System.Drawing.Color.White;
             this.btnHide.Image = ((System.Drawing.Image)(resources.GetObject("btnHide.Image")));
-            this.btnHide.Location = new System.Drawing.Point(341, 178);
+            this.btnHide.Location = new System.Drawing.Point(342, 181);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(30, 25);
             this.btnHide.TabIndex = 9;
@@ -153,10 +158,10 @@
             // frmLogin
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(539, 258);
+            this.ClientSize = new System.Drawing.Size(544, 283);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);

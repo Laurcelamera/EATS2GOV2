@@ -92,13 +92,16 @@
             // 
             // btnToMain
             // 
-            this.btnToMain.Location = new System.Drawing.Point(5, 11);
+            this.btnToMain.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnToMain.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToMain.ForeColor = System.Drawing.Color.Lavender;
+            this.btnToMain.Location = new System.Drawing.Point(5, 8);
             this.btnToMain.Margin = new System.Windows.Forms.Padding(2);
             this.btnToMain.Name = "btnToMain";
-            this.btnToMain.Size = new System.Drawing.Size(78, 38);
+            this.btnToMain.Size = new System.Drawing.Size(83, 41);
             this.btnToMain.TabIndex = 3;
             this.btnToMain.Text = "Back";
-            this.btnToMain.UseVisualStyleBackColor = true;
+            this.btnToMain.UseVisualStyleBackColor = false;
             this.btnToMain.Click += new System.EventHandler(this.btnToMain_Click);
             // 
             // dataIngredients
@@ -618,7 +621,7 @@
             this.label1.BackColor = System.Drawing.Color.BlueViolet;
             this.label1.Font = new System.Drawing.Font("Montserrat", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lavender;
-            this.label1.Location = new System.Drawing.Point(87, 0);
+            this.label1.Location = new System.Drawing.Point(92, -1);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(450, 52);
@@ -632,7 +635,7 @@
             this.panel1.Controls.Add(this.btnToMain);
             this.panel1.Location = new System.Drawing.Point(6, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1453, 65);
+            this.panel1.Size = new System.Drawing.Size(1453, 55);
             this.panel1.TabIndex = 40;
             // 
             // frmInventory
@@ -644,7 +647,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabInventory);
             this.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmInventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";

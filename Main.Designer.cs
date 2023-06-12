@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -95,7 +95,7 @@
             this.panel1.Location = new System.Drawing.Point(-5, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 858);
+            this.panel1.Size = new System.Drawing.Size(233, 883);
             this.panel1.TabIndex = 17;
             // 
             // btnShutdown
@@ -247,20 +247,20 @@
             // 
             // chartSales
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartSales.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartSales.Legends.Add(legend1);
-            this.chartSales.Location = new System.Drawing.Point(259, 264);
-            this.chartSales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            chartArea8.Name = "ChartArea1";
+            this.chartSales.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chartSales.Legends.Add(legend8);
+            this.chartSales.Location = new System.Drawing.Point(258, 263);
+            this.chartSales.Margin = new System.Windows.Forms.Padding(4);
             this.chartSales.Name = "chartSales";
             this.chartSales.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 4;
-            this.chartSales.Series.Add(series1);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            series8.YValuesPerPoint = 4;
+            this.chartSales.Series.Add(series8);
             this.chartSales.Size = new System.Drawing.Size(1034, 480);
             this.chartSales.TabIndex = 18;
             this.chartSales.Tag = "Top Selling Products";
@@ -270,8 +270,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1368, 856);
+            this.ClientSize = new System.Drawing.Size(1368, 874);
             this.Controls.Add(this.chartSales);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);

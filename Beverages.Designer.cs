@@ -701,7 +701,7 @@
             // 
             this.btnPrint.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Location = new System.Drawing.Point(903, 631);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(278, 46);
             this.btnPrint.TabIndex = 180;
@@ -714,7 +714,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1199, 739);
+            this.ClientSize = new System.Drawing.Size(1199, 737);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label16);
@@ -758,6 +758,7 @@
             this.ForeColor = System.Drawing.Color.Indigo;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmBeverages";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Beverages";

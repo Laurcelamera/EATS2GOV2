@@ -114,8 +114,9 @@
             // 
             // btnToMain
             // 
-            this.btnToMain.BackColor = System.Drawing.Color.Transparent;
-            this.btnToMain.ForeColor = System.Drawing.Color.Indigo;
+            this.btnToMain.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnToMain.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToMain.ForeColor = System.Drawing.Color.Lavender;
             this.btnToMain.Location = new System.Drawing.Point(0, 0);
             this.btnToMain.Margin = new System.Windows.Forms.Padding(2);
             this.btnToMain.Name = "btnToMain";
@@ -251,10 +252,12 @@
             this.Controls.Add(this.dateTimeFrom);
             this.Controls.Add(this.dataSales);
             this.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CLEAR";
+            this.Text = "SALES";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSales_FormClosed);
             this.Load += new System.EventHandler(this.frmSales_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataSales)).EndInit();

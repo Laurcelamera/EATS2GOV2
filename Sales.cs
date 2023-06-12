@@ -24,8 +24,11 @@ namespace EATS2GOV2
         {
             InitializeComponent();
         }
-
-        private void LoadSalesData()
+        public DataGridView SalesDataGrid
+        {
+            get { return dataSales; }
+        }
+        public void LoadSalesData()
         {
 
             conn = new MySqlConnection(connectionString);
@@ -36,13 +39,14 @@ namespace EATS2GOV2
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
+                    
                     dataSales.Rows.Add(rdr.GetString(0), rdr.GetString(1),
                         rdr.GetString(2), rdr.GetString(3), rdr.GetString(4));
                 }
                 conn.Close();
             }
         }
-        private void GetSalesData(DateTime fromDate, DateTime toDate)
+        public void GetSalesData(DateTime fromDate, DateTime toDate)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -73,10 +77,29 @@ namespace EATS2GOV2
                 txtTotalSales.Text = totalSales.ToString("0.00");
             }
         }
+        private decimal CalculateTotalSalesAllTime()
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                string query = "SELECT SUM(price * quantity) FROM sales";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value && decimal.TryParse(result.ToString(), out decimal totalSales))
+                {
+                    return totalSales;
+                }
+                return 0;
+            }
+        }
 
         private void frmSales_Load_1(object sender, EventArgs e)
         {
             LoadSalesData();
+
+            // Calculate and display the total sales of all time
+            decimal totalSalesAllTime = CalculateTotalSalesAllTime();
+            txtTotalSales.Text = totalSalesAllTime.ToString("0.00");
         }
 
 

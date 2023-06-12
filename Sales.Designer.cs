@@ -54,20 +54,22 @@
             this.dataSales.AllowUserToAddRows = false;
             this.dataSales.AllowUserToDeleteRows = false;
             this.dataSales.BackgroundColor = System.Drawing.Color.GhostWhite;
-            this.dataSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSales.ColumnHeadersHeight = 35;
+            this.dataSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataSales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.item_Name,
             this.price,
             this.quantity,
             this.transaction_date});
-            this.dataSales.Location = new System.Drawing.Point(143, 77);
+            this.dataSales.Location = new System.Drawing.Point(22, 53);
             this.dataSales.Margin = new System.Windows.Forms.Padding(2);
             this.dataSales.Name = "dataSales";
             this.dataSales.ReadOnly = true;
-            this.dataSales.RowHeadersWidth = 51;
+            this.dataSales.RowHeadersWidth = 180;
+            this.dataSales.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataSales.RowTemplate.Height = 24;
-            this.dataSales.Size = new System.Drawing.Size(670, 404);
+            this.dataSales.Size = new System.Drawing.Size(1096, 404);
             this.dataSales.TabIndex = 1;
             // 
             // id
@@ -76,7 +78,7 @@
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
             this.id.ReadOnly = true;
-            this.id.Width = 50;
+            this.id.Width = 90;
             // 
             // item_Name
             // 
@@ -84,7 +86,7 @@
             this.item_Name.MinimumWidth = 6;
             this.item_Name.Name = "item_Name";
             this.item_Name.ReadOnly = true;
-            this.item_Name.Width = 140;
+            this.item_Name.Width = 200;
             // 
             // price
             // 
@@ -92,7 +94,7 @@
             this.price.MinimumWidth = 6;
             this.price.Name = "price";
             this.price.ReadOnly = true;
-            this.price.Width = 125;
+            this.price.Width = 200;
             // 
             // quantity
             // 
@@ -100,7 +102,7 @@
             this.quantity.MinimumWidth = 6;
             this.quantity.Name = "quantity";
             this.quantity.ReadOnly = true;
-            this.quantity.Width = 125;
+            this.quantity.Width = 200;
             // 
             // transaction_date
             // 
@@ -108,7 +110,7 @@
             this.transaction_date.MinimumWidth = 6;
             this.transaction_date.Name = "transaction_date";
             this.transaction_date.ReadOnly = true;
-            this.transaction_date.Width = 150;
+            this.transaction_date.Width = 200;
             // 
             // btnToMain
             // 
@@ -125,12 +127,12 @@
             // 
             // dateTimeFrom
             // 
-            this.dateTimeFrom.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeFrom.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeFrom.Location = new System.Drawing.Point(896, 132);
+            this.dateTimeFrom.Location = new System.Drawing.Point(442, 465);
             this.dateTimeFrom.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeFrom.Name = "dateTimeFrom";
-            this.dateTimeFrom.Size = new System.Drawing.Size(141, 24);
+            this.dateTimeFrom.Size = new System.Drawing.Size(118, 25);
             this.dateTimeFrom.TabIndex = 3;
             this.dateTimeFrom.Value = new System.DateTime(2023, 5, 30, 0, 0, 0, 0);
             // 
@@ -138,12 +140,12 @@
             // 
             this.btnFilter.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.ForeColor = System.Drawing.Color.Black;
-            this.btnFilter.Location = new System.Drawing.Point(860, 206);
+            this.btnFilter.Location = new System.Drawing.Point(731, 461);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(2);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(201, 42);
+            this.btnFilter.Size = new System.Drawing.Size(201, 72);
             this.btnFilter.TabIndex = 4;
-            this.btnFilter.Text = "Filter";
+            this.btnFilter.Text = "SHOW SALES";
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
@@ -153,7 +155,7 @@
             this.label1.BackColor = System.Drawing.Color.BlueViolet;
             this.label1.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lavender;
-            this.label1.Location = new System.Drawing.Point(84, 4);
+            this.label1.Location = new System.Drawing.Point(84, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 37);
@@ -174,60 +176,66 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(841, 139);
+            this.label2.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(384, 467);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(53, 21);
             this.label2.TabIndex = 19;
             this.label2.Text = "From:";
             // 
             // dateTimeTo
             // 
-            this.dateTimeTo.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeTo.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeTo.Location = new System.Drawing.Point(896, 164);
+            this.dateTimeTo.Location = new System.Drawing.Point(600, 465);
             this.dateTimeTo.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeTo.Name = "dateTimeTo";
-            this.dateTimeTo.Size = new System.Drawing.Size(141, 24);
+            this.dateTimeTo.Size = new System.Drawing.Size(124, 25);
             this.dateTimeTo.TabIndex = 20;
             this.dateTimeTo.Value = new System.DateTime(2023, 5, 30, 0, 0, 0, 0);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(856, 166);
+            this.label3.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(565, 467);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 15);
+            this.label3.Size = new System.Drawing.Size(30, 21);
             this.label3.TabIndex = 21;
             this.label3.Text = "To:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(841, 98);
+            this.label4.Font = new System.Drawing.Font("Montserrat", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(272, 466);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 15);
+            this.label4.Size = new System.Drawing.Size(114, 21);
             this.label4.TabIndex = 22;
             this.label4.Text = "Filter By Date:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(831, 284);
+            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(449, 503);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 15);
+            this.label5.Size = new System.Drawing.Size(127, 22);
             this.label5.TabIndex = 23;
             this.label5.Text = "TOTAL SALES:";
             // 
             // txtTotalSales
             // 
-            this.txtTotalSales.Location = new System.Drawing.Point(941, 277);
+            this.txtTotalSales.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalSales.Location = new System.Drawing.Point(583, 497);
             this.txtTotalSales.Multiline = true;
             this.txtTotalSales.Name = "txtTotalSales";
-            this.txtTotalSales.Size = new System.Drawing.Size(120, 36);
+            this.txtTotalSales.Size = new System.Drawing.Size(141, 36);
             this.txtTotalSales.TabIndex = 24;
             // 
             // frmSales
             // 
+            this.AcceptButton = this.btnFilter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
@@ -267,13 +275,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimeTo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTotalSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn item_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn transaction_date;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTotalSales;
     }
 }

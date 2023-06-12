@@ -81,19 +81,21 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtItemQuantity2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataIngredients)).BeginInit();
             this.tabInventory.SuspendLayout();
             this.tabIngredients.SuspendLayout();
             this.tabMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataMenu)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnToMain
             // 
-            this.btnToMain.Location = new System.Drawing.Point(25, 12);
+            this.btnToMain.Location = new System.Drawing.Point(5, 11);
             this.btnToMain.Margin = new System.Windows.Forms.Padding(2);
             this.btnToMain.Name = "btnToMain";
-            this.btnToMain.Size = new System.Drawing.Size(72, 40);
+            this.btnToMain.Size = new System.Drawing.Size(78, 38);
             this.btnToMain.TabIndex = 3;
             this.btnToMain.Text = "Back";
             this.btnToMain.UseVisualStyleBackColor = true;
@@ -114,12 +116,12 @@
             this.itemExpiry,
             this.itemReceivedDate,
             this.itemSup});
-            this.dataIngredients.Location = new System.Drawing.Point(388, 73);
+            this.dataIngredients.Location = new System.Drawing.Point(418, 73);
             this.dataIngredients.Name = "dataIngredients";
             this.dataIngredients.ReadOnly = true;
             this.dataIngredients.RowHeadersWidth = 51;
             this.dataIngredients.RowTemplate.Height = 24;
-            this.dataIngredients.Size = new System.Drawing.Size(970, 516);
+            this.dataIngredients.Size = new System.Drawing.Size(940, 516);
             this.dataIngredients.TabIndex = 17;
             this.dataIngredients.SelectionChanged += new System.EventHandler(this.dataInventory_SelectionChanged_1);
             // 
@@ -426,7 +428,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Montserrat Medium", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.BlueViolet;
-            this.label11.Location = new System.Drawing.Point(86, 35);
+            this.label11.Location = new System.Drawing.Point(66, 41);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(187, 66);
@@ -435,7 +437,7 @@
             // 
             // btnDelete2
             // 
-            this.btnDelete2.Location = new System.Drawing.Point(315, 504);
+            this.btnDelete2.Location = new System.Drawing.Point(298, 487);
             this.btnDelete2.Name = "btnDelete2";
             this.btnDelete2.Size = new System.Drawing.Size(104, 41);
             this.btnDelete2.TabIndex = 55;
@@ -445,7 +447,7 @@
             // 
             // btnSave2
             // 
-            this.btnSave2.Location = new System.Drawing.Point(205, 504);
+            this.btnSave2.Location = new System.Drawing.Point(188, 487);
             this.btnSave2.Name = "btnSave2";
             this.btnSave2.Size = new System.Drawing.Size(104, 41);
             this.btnSave2.TabIndex = 54;
@@ -455,7 +457,7 @@
             // 
             // btnAdd2
             // 
-            this.btnAdd2.Location = new System.Drawing.Point(95, 504);
+            this.btnAdd2.Location = new System.Drawing.Point(78, 485);
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Size = new System.Drawing.Size(104, 41);
             this.btnAdd2.TabIndex = 53;
@@ -468,19 +470,19 @@
             this.dataMenu.AllowUserToAddRows = false;
             this.dataMenu.AllowUserToDeleteRows = false;
             this.dataMenu.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.dataMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataMenu.ColumnHeadersHeight = 40;
             this.dataMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.dataMenu.Location = new System.Drawing.Point(745, 82);
+            this.dataMenu.Location = new System.Drawing.Point(458, 82);
             this.dataMenu.Name = "dataMenu";
             this.dataMenu.ReadOnly = true;
-            this.dataMenu.RowHeadersWidth = 51;
+            this.dataMenu.RowHeadersWidth = 150;
             this.dataMenu.RowTemplate.Height = 24;
-            this.dataMenu.Size = new System.Drawing.Size(598, 463);
+            this.dataMenu.Size = new System.Drawing.Size(885, 463);
             this.dataMenu.TabIndex = 36;
             this.dataMenu.SelectionChanged += new System.EventHandler(this.dataMenu_SelectionChanged);
             // 
@@ -490,7 +492,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 40;
+            this.dataGridViewTextBoxColumn1.Width = 80;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -498,7 +500,7 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
+            this.dataGridViewTextBoxColumn2.Width = 180;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -506,7 +508,7 @@
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.dataGridViewTextBoxColumn3.Width = 160;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -514,7 +516,7 @@
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 110;
+            this.dataGridViewTextBoxColumn4.Width = 120;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -522,11 +524,11 @@
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
+            this.dataGridViewTextBoxColumn5.Width = 140;
             // 
             // txtItemID2
             // 
-            this.txtItemID2.Location = new System.Drawing.Point(97, 159);
+            this.txtItemID2.Location = new System.Drawing.Point(80, 161);
             this.txtItemID2.Multiline = true;
             this.txtItemID2.Name = "txtItemID2";
             this.txtItemID2.ReadOnly = true;
@@ -536,7 +538,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 136);
+            this.label3.Location = new System.Drawing.Point(76, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 38;
@@ -544,7 +546,7 @@
             // 
             // txtItemName2
             // 
-            this.txtItemName2.Location = new System.Drawing.Point(97, 227);
+            this.txtItemName2.Location = new System.Drawing.Point(80, 229);
             this.txtItemName2.Multiline = true;
             this.txtItemName2.Name = "txtItemName2";
             this.txtItemName2.Size = new System.Drawing.Size(322, 33);
@@ -553,7 +555,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(93, 204);
+            this.label12.Location = new System.Drawing.Point(76, 206);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 15);
             this.label12.TabIndex = 40;
@@ -561,7 +563,7 @@
             // 
             // txtItemType2
             // 
-            this.txtItemType2.Location = new System.Drawing.Point(97, 294);
+            this.txtItemType2.Location = new System.Drawing.Point(80, 296);
             this.txtItemType2.Multiline = true;
             this.txtItemType2.Name = "txtItemType2";
             this.txtItemType2.Size = new System.Drawing.Size(322, 33);
@@ -570,7 +572,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(93, 271);
+            this.label14.Location = new System.Drawing.Point(76, 273);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 15);
             this.label14.TabIndex = 42;
@@ -578,7 +580,7 @@
             // 
             // txtItemPrice2
             // 
-            this.txtItemPrice2.Location = new System.Drawing.Point(97, 362);
+            this.txtItemPrice2.Location = new System.Drawing.Point(80, 364);
             this.txtItemPrice2.Multiline = true;
             this.txtItemPrice2.Name = "txtItemPrice2";
             this.txtItemPrice2.Size = new System.Drawing.Size(322, 33);
@@ -587,7 +589,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(93, 339);
+            this.label16.Location = new System.Drawing.Point(76, 341);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(35, 15);
             this.label16.TabIndex = 44;
@@ -596,7 +598,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(91, 407);
+            this.label17.Location = new System.Drawing.Point(74, 409);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 15);
             this.label17.TabIndex = 46;
@@ -604,7 +606,7 @@
             // 
             // txtItemQuantity2
             // 
-            this.txtItemQuantity2.Location = new System.Drawing.Point(95, 430);
+            this.txtItemQuantity2.Location = new System.Drawing.Point(78, 432);
             this.txtItemQuantity2.Multiline = true;
             this.txtItemQuantity2.Name = "txtItemQuantity2";
             this.txtItemQuantity2.Size = new System.Drawing.Size(322, 33);
@@ -613,15 +615,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Lavender;
-            this.label1.Font = new System.Drawing.Font("Montserrat Medium", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.BlueViolet;
-            this.label1.Location = new System.Drawing.Point(334, 12);
+            this.label1.BackColor = System.Drawing.Color.BlueViolet;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Lavender;
+            this.label1.Location = new System.Drawing.Point(87, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(578, 66);
+            this.label1.Size = new System.Drawing.Size(450, 52);
             this.label1.TabIndex = 16;
             this.label1.Text = "EATS2GO INVENTORY";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnToMain);
+            this.panel1.Location = new System.Drawing.Point(6, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1453, 65);
+            this.panel1.TabIndex = 40;
             // 
             // frmInventory
             // 
@@ -629,9 +641,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1450, 755);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabInventory);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnToMain);
             this.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInventory";
@@ -646,8 +657,9 @@
             this.tabMenu.ResumeLayout(false);
             this.tabMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataMenu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -698,12 +710,13 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtItemQuantity2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label1;
     }
 }

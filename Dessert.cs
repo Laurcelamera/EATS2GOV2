@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace EATS2GOV2
 {
     public partial class frmDessert : Form
     {
+        private PrintDocument printDocument;
+        private PrintPreviewDialog printPreviewDialog;
         public string connectionString =
             "datasource=localhost;" +
             "port=3306;" +
@@ -37,6 +40,11 @@ namespace EATS2GOV2
         public frmDessert()
         {
             InitializeComponent();
+            printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocument_PrintPage;
+
+            printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = printDocument;
         }
         private double halohaloPrice =150.00;
         private double carSundaePrice = 40.00;
@@ -156,6 +164,15 @@ namespace EATS2GOV2
             txtReceipt.Clear();
             txtReceipt.AppendText(headerText);
             txtReceipt.AppendText(lineOfAsterisks);
+
+            // Clear numeric up-down controls
+            numHalo.Value = 0;
+            numCaSundae.Value = 0;
+            numStSundae.Value = 0;
+            numChCake.Value = 0;
+            numBlPie.Value = 0;
+            numBtarts.Value = 0;
+            txtCash.Clear();
             totalOrderPrice = 0;
         }
 
@@ -197,9 +214,6 @@ namespace EATS2GOV2
             InsertItemToDatabase("CHEESE CAKE", Convert.ToInt32(numChCake.Value), chCakePrice);
             InsertItemToDatabase("BLUEBERRY PIE", Convert.ToInt32(numBlPie.Value), bluPiePrice);
             InsertItemToDatabase("BUTTER TARTS", Convert.ToInt32(numBtarts.Value), bTartPrice);
-
-            frmSales salesForm = new frmSales();
-            salesForm.Show();
         }
         private void InsertItemToDatabase(string item, int quantity, double price)
         {
@@ -249,6 +263,49 @@ namespace EATS2GOV2
             frmMain frmMain = new frmMain();
             frmMain.Show();
             this.Hide();
+        }
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Define the content and layout of the printed receipt
+            Font font = txtReceipt.Font;
+            Brush brush = new SolidBrush(txtReceipt.ForeColor);
+            float lineHeight = font.GetHeight(e.Graphics);
+            float currentY = 0;
+
+            string receiptContent = txtReceipt.Text;
+
+            // Print each line of the receipt
+            string[] lines = receiptContent.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            foreach (string line in lines)
+            {
+                e.Graphics.DrawString(line, font, brush, 0, currentY);
+                currentY += lineHeight;
+            }
+        }
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintDocument printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocument_PrintPage;
+
+            // Adjust paper size
+            printDocument.DefaultPageSettings.PaperSize = new PaperSize("Custom", txtReceipt.Width, txtReceipt.Height);
+
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = printDocument;
+
+            printPreviewDialog.ShowDialog();
+        }
+
+        private void BtnSignout_Click(object sender, EventArgs e)
+        {
+            frmLogin form1 = new frmLogin();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void btnShutdown_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

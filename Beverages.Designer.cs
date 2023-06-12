@@ -68,6 +68,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnShutdown = new System.Windows.Forms.Button();
+            this.BtnSignout = new System.Windows.Forms.Button();
             this.DESSERT = new System.Windows.Forms.Button();
             this.btnDrinks = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
@@ -76,6 +78,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numWater)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLemonade)).BeginInit();
@@ -167,7 +170,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label11.Location = new System.Drawing.Point(724, 494);
+            this.label11.Location = new System.Drawing.Point(724, 514);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 20);
@@ -179,7 +182,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label12.Location = new System.Drawing.Point(714, 474);
+            this.label12.Location = new System.Drawing.Point(714, 493);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 20);
@@ -189,7 +192,7 @@
             // btnWater
             // 
             this.btnWater.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWater.Location = new System.Drawing.Point(718, 515);
+            this.btnWater.Location = new System.Drawing.Point(718, 534);
             this.btnWater.Margin = new System.Windows.Forms.Padding(2);
             this.btnWater.Name = "btnWater";
             this.btnWater.Size = new System.Drawing.Size(120, 29);
@@ -201,7 +204,7 @@
             // numWater
             // 
             this.numWater.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numWater.Location = new System.Drawing.Point(672, 517);
+            this.numWater.Location = new System.Drawing.Point(672, 536);
             this.numWater.Margin = new System.Windows.Forms.Padding(2);
             this.numWater.Name = "numWater";
             this.numWater.Size = new System.Drawing.Size(41, 27);
@@ -211,7 +214,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(672, 344);
+            this.pictureBox6.Location = new System.Drawing.Point(672, 363);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(164, 128);
@@ -224,7 +227,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label9.Location = new System.Drawing.Point(724, 276);
+            this.label9.Location = new System.Drawing.Point(724, 295);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
@@ -236,7 +239,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label10.Location = new System.Drawing.Point(704, 255);
+            this.label10.Location = new System.Drawing.Point(704, 274);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 20);
@@ -246,7 +249,7 @@
             // btnLemon
             // 
             this.btnLemon.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLemon.Location = new System.Drawing.Point(718, 298);
+            this.btnLemon.Location = new System.Drawing.Point(718, 317);
             this.btnLemon.Margin = new System.Windows.Forms.Padding(2);
             this.btnLemon.Name = "btnLemon";
             this.btnLemon.Size = new System.Drawing.Size(120, 29);
@@ -258,7 +261,7 @@
             // numLemonade
             // 
             this.numLemonade.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numLemonade.Location = new System.Drawing.Point(673, 300);
+            this.numLemonade.Location = new System.Drawing.Point(673, 319);
             this.numLemonade.Margin = new System.Windows.Forms.Padding(2);
             this.numLemonade.Name = "numLemonade";
             this.numLemonade.Size = new System.Drawing.Size(41, 27);
@@ -268,7 +271,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(673, 125);
+            this.pictureBox5.Location = new System.Drawing.Point(673, 144);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(164, 128);
@@ -281,7 +284,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label7.Location = new System.Drawing.Point(518, 493);
+            this.label7.Location = new System.Drawing.Point(518, 512);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 20);
@@ -293,7 +296,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label8.Location = new System.Drawing.Point(473, 474);
+            this.label8.Location = new System.Drawing.Point(473, 493);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(149, 20);
@@ -303,7 +306,7 @@
             // btnIT
             // 
             this.btnIT.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIT.Location = new System.Drawing.Point(510, 517);
+            this.btnIT.Location = new System.Drawing.Point(510, 536);
             this.btnIT.Margin = new System.Windows.Forms.Padding(2);
             this.btnIT.Name = "btnIT";
             this.btnIT.Size = new System.Drawing.Size(119, 29);
@@ -315,7 +318,7 @@
             // numIT
             // 
             this.numIT.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numIT.Location = new System.Drawing.Point(466, 519);
+            this.numIT.Location = new System.Drawing.Point(466, 538);
             this.numIT.Margin = new System.Windows.Forms.Padding(2);
             this.numIT.Name = "numIT";
             this.numIT.Size = new System.Drawing.Size(41, 27);
@@ -325,7 +328,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(466, 344);
+            this.pictureBox4.Location = new System.Drawing.Point(466, 363);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(164, 128);
@@ -338,7 +341,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label5.Location = new System.Drawing.Point(318, 494);
+            this.label5.Location = new System.Drawing.Point(318, 514);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 20);
@@ -350,7 +353,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label6.Location = new System.Drawing.Point(271, 474);
+            this.label6.Location = new System.Drawing.Point(271, 493);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 20);
@@ -360,7 +363,7 @@
             // btnOJ
             // 
             this.btnOJ.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOJ.Location = new System.Drawing.Point(292, 515);
+            this.btnOJ.Location = new System.Drawing.Point(292, 534);
             this.btnOJ.Margin = new System.Windows.Forms.Padding(2);
             this.btnOJ.Name = "btnOJ";
             this.btnOJ.Size = new System.Drawing.Size(124, 29);
@@ -372,7 +375,7 @@
             // numOJ
             // 
             this.numOJ.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numOJ.Location = new System.Drawing.Point(249, 518);
+            this.numOJ.Location = new System.Drawing.Point(249, 538);
             this.numOJ.Margin = new System.Windows.Forms.Padding(2);
             this.numOJ.Name = "numOJ";
             this.numOJ.Size = new System.Drawing.Size(41, 27);
@@ -382,7 +385,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(256, 344);
+            this.pictureBox3.Location = new System.Drawing.Point(256, 363);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(164, 128);
@@ -395,7 +398,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label3.Location = new System.Drawing.Point(522, 276);
+            this.label3.Location = new System.Drawing.Point(522, 295);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 20);
@@ -407,7 +410,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label4.Location = new System.Drawing.Point(470, 256);
+            this.label4.Location = new System.Drawing.Point(470, 275);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(159, 20);
@@ -417,7 +420,7 @@
             // btnCJ
             // 
             this.btnCJ.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCJ.Location = new System.Drawing.Point(510, 298);
+            this.btnCJ.Location = new System.Drawing.Point(510, 317);
             this.btnCJ.Margin = new System.Windows.Forms.Padding(2);
             this.btnCJ.Name = "btnCJ";
             this.btnCJ.Size = new System.Drawing.Size(119, 29);
@@ -429,7 +432,7 @@
             // numCJ
             // 
             this.numCJ.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numCJ.Location = new System.Drawing.Point(466, 300);
+            this.numCJ.Location = new System.Drawing.Point(466, 319);
             this.numCJ.Margin = new System.Windows.Forms.Padding(2);
             this.numCJ.Name = "numCJ";
             this.numCJ.Size = new System.Drawing.Size(41, 27);
@@ -439,7 +442,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(466, 125);
+            this.pictureBox2.Location = new System.Drawing.Point(466, 144);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(164, 128);
@@ -452,7 +455,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label2.Location = new System.Drawing.Point(318, 275);
+            this.label2.Location = new System.Drawing.Point(318, 294);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
@@ -464,7 +467,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label1.Location = new System.Drawing.Point(288, 255);
+            this.label1.Location = new System.Drawing.Point(288, 274);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 20);
@@ -474,7 +477,7 @@
             // btnBJ
             // 
             this.btnBJ.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBJ.Location = new System.Drawing.Point(294, 298);
+            this.btnBJ.Location = new System.Drawing.Point(294, 317);
             this.btnBJ.Margin = new System.Windows.Forms.Padding(2);
             this.btnBJ.Name = "btnBJ";
             this.btnBJ.Size = new System.Drawing.Size(126, 29);
@@ -486,7 +489,7 @@
             // numBJ
             // 
             this.numBJ.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numBJ.Location = new System.Drawing.Point(250, 300);
+            this.numBJ.Location = new System.Drawing.Point(250, 319);
             this.numBJ.Margin = new System.Windows.Forms.Padding(2);
             this.numBJ.Name = "numBJ";
             this.numBJ.Size = new System.Drawing.Size(41, 27);
@@ -496,7 +499,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(256, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(256, 144);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(164, 128);
@@ -531,6 +534,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnShutdown);
+            this.panel1.Controls.Add(this.BtnSignout);
             this.panel1.Controls.Add(this.DESSERT);
             this.panel1.Controls.Add(this.btnDrinks);
             this.panel1.Controls.Add(this.btnFood);
@@ -543,8 +548,42 @@
             this.panel1.Location = new System.Drawing.Point(-7, -10);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(193, 727);
+            this.panel1.Size = new System.Drawing.Size(193, 745);
             this.panel1.TabIndex = 179;
+            // 
+            // btnShutdown
+            // 
+            this.btnShutdown.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShutdown.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShutdown.ForeColor = System.Drawing.Color.Lavender;
+            this.btnShutdown.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShutdown.Location = new System.Drawing.Point(5, 691);
+            this.btnShutdown.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShutdown.Name = "btnShutdown";
+            this.btnShutdown.Size = new System.Drawing.Size(191, 47);
+            this.btnShutdown.TabIndex = 186;
+            this.btnShutdown.Text = "SHUDTOWN";
+            this.btnShutdown.UseVisualStyleBackColor = false;
+            this.btnShutdown.Click += new System.EventHandler(this.btnShutdown_Click);
+            // 
+            // BtnSignout
+            // 
+            this.BtnSignout.BackColor = System.Drawing.Color.BlueViolet;
+            this.BtnSignout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSignout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSignout.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSignout.ForeColor = System.Drawing.Color.Lavender;
+            this.BtnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSignout.Location = new System.Drawing.Point(5, 638);
+            this.BtnSignout.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSignout.Name = "BtnSignout";
+            this.BtnSignout.Size = new System.Drawing.Size(191, 47);
+            this.BtnSignout.TabIndex = 185;
+            this.BtnSignout.Text = "SIGN OUT";
+            this.BtnSignout.UseVisualStyleBackColor = false;
+            this.BtnSignout.Click += new System.EventHandler(this.BtnSignout_Click);
             // 
             // DESSERT
             // 
@@ -658,12 +697,25 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "EATS2GO";
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Location = new System.Drawing.Point(903, 631);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(278, 46);
+            this.btnPrint.TabIndex = 180;
+            this.btnPrint.Text = "PRINT";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // frmBeverages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1199, 687);
+            this.ClientSize = new System.Drawing.Size(1199, 739);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtCash);
@@ -703,7 +755,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Black;
+            this.ForeColor = System.Drawing.Color.Indigo;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmBeverages";
@@ -781,5 +833,8 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnShutdown;
+        private System.Windows.Forms.Button BtnSignout;
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ namespace EATS2GOV2
 {
     public partial class frmBeverages : Form
     {
+        private PrintDocument printDocument;
+        private PrintPreviewDialog printPreviewDialog;
         public string connectionString =
             "datasource=localhost;" +
             "port=3306;" +
@@ -171,6 +174,15 @@ namespace EATS2GOV2
             txtReceipt.Clear();
             txtReceipt.AppendText(headerText);
             txtReceipt.AppendText(lineOfAsterisks);
+
+            // Clear numeric up-down controls
+            numBJ.Value = 0;
+            numCJ.Value = 0;
+            numLemonade.Value = 0;
+            numOJ.Value = 0;
+            numIT.Value = 0;
+            numWater.Value = 0;
+            txtCash.Clear();
             totalOrderPrice = 0;
         }
 
@@ -234,6 +246,47 @@ namespace EATS2GOV2
             this.Hide();
         }
         private void frmBeverages_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Define the content and layout of the printed receipt
+            Font font = txtReceipt.Font;
+            Brush brush = new SolidBrush(txtReceipt.ForeColor);
+            float lineHeight = font.GetHeight(e.Graphics);
+            float currentY = 0;
+
+            string receiptContent = txtReceipt.Text;
+
+            // Print each line of the receipt
+            string[] lines = receiptContent.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            foreach (string line in lines)
+            {
+                e.Graphics.DrawString(line, font, brush, 0, currentY);
+                currentY += lineHeight;
+            }
+        }
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintDocument printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocument_PrintPage;
+
+            // Adjust paper size
+            printDocument.DefaultPageSettings.PaperSize = new PaperSize("Custom", txtReceipt.Width, txtReceipt.Height);
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = printDocument;
+            printPreviewDialog.ShowDialog();
+        }
+
+        private void BtnSignout_Click(object sender, EventArgs e)
+        {
+            frmLogin form1 = new frmLogin();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void btnShutdown_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

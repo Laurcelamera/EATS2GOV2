@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFood));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnShutdown = new System.Windows.Forms.Button();
+            this.BtnSignout = new System.Windows.Forms.Button();
             this.DESSERT = new System.Windows.Forms.Button();
             this.btnDrinks = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
@@ -76,6 +78,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCornd)).BeginInit();
@@ -97,6 +100,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnShutdown);
+            this.panel1.Controls.Add(this.BtnSignout);
             this.panel1.Controls.Add(this.DESSERT);
             this.panel1.Controls.Add(this.btnDrinks);
             this.panel1.Controls.Add(this.btnFood);
@@ -109,8 +114,42 @@
             this.panel1.Location = new System.Drawing.Point(-13, -22);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(193, 727);
+            this.panel1.Size = new System.Drawing.Size(193, 759);
             this.panel1.TabIndex = 66;
+            // 
+            // btnShutdown
+            // 
+            this.btnShutdown.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnShutdown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnShutdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShutdown.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShutdown.ForeColor = System.Drawing.Color.Lavender;
+            this.btnShutdown.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShutdown.Location = new System.Drawing.Point(9, 703);
+            this.btnShutdown.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShutdown.Name = "btnShutdown";
+            this.btnShutdown.Size = new System.Drawing.Size(191, 47);
+            this.btnShutdown.TabIndex = 186;
+            this.btnShutdown.Text = "SHUDTOWN";
+            this.btnShutdown.UseVisualStyleBackColor = false;
+            this.btnShutdown.Click += new System.EventHandler(this.btnShutdown_Click);
+            // 
+            // BtnSignout
+            // 
+            this.BtnSignout.BackColor = System.Drawing.Color.BlueViolet;
+            this.BtnSignout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSignout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSignout.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSignout.ForeColor = System.Drawing.Color.Lavender;
+            this.BtnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSignout.Location = new System.Drawing.Point(12, 650);
+            this.BtnSignout.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSignout.Name = "BtnSignout";
+            this.BtnSignout.Size = new System.Drawing.Size(188, 47);
+            this.BtnSignout.TabIndex = 185;
+            this.BtnSignout.Text = "SIGN OUT";
+            this.BtnSignout.UseVisualStyleBackColor = false;
+            this.BtnSignout.Click += new System.EventHandler(this.BtnSignout_Click);
             // 
             // DESSERT
             // 
@@ -228,7 +267,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(911, 595);
+            this.label16.Location = new System.Drawing.Point(913, 567);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(50, 20);
@@ -238,8 +277,8 @@
             // txtCash
             // 
             this.txtCash.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCash.Location = new System.Drawing.Point(893, 620);
-            this.txtCash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCash.Location = new System.Drawing.Point(894, 592);
+            this.txtCash.Margin = new System.Windows.Forms.Padding(2);
             this.txtCash.Multiline = true;
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(91, 34);
@@ -248,8 +287,8 @@
             // btnTotal
             // 
             this.btnTotal.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTotal.Location = new System.Drawing.Point(1082, 575);
-            this.btnTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTotal.Location = new System.Drawing.Point(1083, 547);
+            this.btnTotal.Margin = new System.Windows.Forms.Padding(2);
             this.btnTotal.Name = "btnTotal";
             this.btnTotal.Size = new System.Drawing.Size(90, 40);
             this.btnTotal.TabIndex = 135;
@@ -260,8 +299,8 @@
             // btnCompleteOrder
             // 
             this.btnCompleteOrder.Font = new System.Drawing.Font("Montserrat Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompleteOrder.Location = new System.Drawing.Point(988, 618);
-            this.btnCompleteOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCompleteOrder.Location = new System.Drawing.Point(990, 590);
+            this.btnCompleteOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompleteOrder.Name = "btnCompleteOrder";
             this.btnCompleteOrder.Size = new System.Drawing.Size(186, 36);
             this.btnCompleteOrder.TabIndex = 134;
@@ -272,8 +311,8 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(988, 576);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(990, 548);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(90, 40);
             this.btnClear.TabIndex = 133;
@@ -285,8 +324,8 @@
             // 
             this.txtReceipt.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtReceipt.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceipt.Location = new System.Drawing.Point(893, 154);
-            this.txtReceipt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtReceipt.Location = new System.Drawing.Point(894, 126);
+            this.txtReceipt.Margin = new System.Windows.Forms.Padding(2);
             this.txtReceipt.Name = "txtReceipt";
             this.txtReceipt.ReadOnly = true;
             this.txtReceipt.Size = new System.Drawing.Size(281, 418);
@@ -321,7 +360,7 @@
             // 
             this.btnCornd.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCornd.Location = new System.Drawing.Point(710, 545);
-            this.btnCornd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCornd.Margin = new System.Windows.Forms.Padding(2);
             this.btnCornd.Name = "btnCornd";
             this.btnCornd.Size = new System.Drawing.Size(120, 29);
             this.btnCornd.TabIndex = 129;
@@ -333,7 +372,7 @@
             // 
             this.numCornd.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numCornd.Location = new System.Drawing.Point(664, 547);
-            this.numCornd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numCornd.Margin = new System.Windows.Forms.Padding(2);
             this.numCornd.Name = "numCornd";
             this.numCornd.Size = new System.Drawing.Size(41, 27);
             this.numCornd.TabIndex = 128;
@@ -343,7 +382,7 @@
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(664, 374);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(164, 128);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -378,7 +417,7 @@
             // 
             this.btnTaco.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaco.Location = new System.Drawing.Point(710, 328);
-            this.btnTaco.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaco.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaco.Name = "btnTaco";
             this.btnTaco.Size = new System.Drawing.Size(120, 29);
             this.btnTaco.TabIndex = 124;
@@ -390,7 +429,7 @@
             // 
             this.numTaco.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTaco.Location = new System.Drawing.Point(665, 330);
-            this.numTaco.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTaco.Margin = new System.Windows.Forms.Padding(2);
             this.numTaco.Name = "numTaco";
             this.numTaco.Size = new System.Drawing.Size(41, 27);
             this.numTaco.TabIndex = 123;
@@ -400,7 +439,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(665, 155);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(164, 128);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -435,7 +474,7 @@
             // 
             this.btnPesto.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesto.Location = new System.Drawing.Point(502, 547);
-            this.btnPesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPesto.Margin = new System.Windows.Forms.Padding(2);
             this.btnPesto.Name = "btnPesto";
             this.btnPesto.Size = new System.Drawing.Size(119, 29);
             this.btnPesto.TabIndex = 119;
@@ -447,7 +486,7 @@
             // 
             this.numPesto.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPesto.Location = new System.Drawing.Point(458, 549);
-            this.numPesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numPesto.Margin = new System.Windows.Forms.Padding(2);
             this.numPesto.Name = "numPesto";
             this.numPesto.Size = new System.Drawing.Size(41, 27);
             this.numPesto.TabIndex = 118;
@@ -457,7 +496,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(458, 374);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(164, 128);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -492,7 +531,7 @@
             // 
             this.btnEgg.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEgg.Location = new System.Drawing.Point(284, 545);
-            this.btnEgg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEgg.Margin = new System.Windows.Forms.Padding(2);
             this.btnEgg.Name = "btnEgg";
             this.btnEgg.Size = new System.Drawing.Size(124, 29);
             this.btnEgg.TabIndex = 114;
@@ -504,7 +543,7 @@
             // 
             this.numEgg.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numEgg.Location = new System.Drawing.Point(241, 548);
-            this.numEgg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numEgg.Margin = new System.Windows.Forms.Padding(2);
             this.numEgg.Name = "numEgg";
             this.numEgg.Size = new System.Drawing.Size(41, 27);
             this.numEgg.TabIndex = 113;
@@ -514,7 +553,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(248, 374);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(164, 128);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -549,7 +588,7 @@
             // 
             this.btnSand.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSand.Location = new System.Drawing.Point(502, 328);
-            this.btnSand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSand.Margin = new System.Windows.Forms.Padding(2);
             this.btnSand.Name = "btnSand";
             this.btnSand.Size = new System.Drawing.Size(119, 29);
             this.btnSand.TabIndex = 109;
@@ -561,7 +600,7 @@
             // 
             this.numSand.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numSand.Location = new System.Drawing.Point(458, 330);
-            this.numSand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSand.Margin = new System.Windows.Forms.Padding(2);
             this.numSand.Name = "numSand";
             this.numSand.Size = new System.Drawing.Size(41, 27);
             this.numSand.TabIndex = 108;
@@ -571,7 +610,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(458, 155);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(164, 128);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -606,7 +645,7 @@
             // 
             this.btnPita.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPita.Location = new System.Drawing.Point(286, 328);
-            this.btnPita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPita.Margin = new System.Windows.Forms.Padding(2);
             this.btnPita.Name = "btnPita";
             this.btnPita.Size = new System.Drawing.Size(126, 29);
             this.btnPita.TabIndex = 104;
@@ -618,7 +657,7 @@
             // 
             this.numPita.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPita.Location = new System.Drawing.Point(242, 330);
-            this.numPita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numPita.Margin = new System.Windows.Forms.Padding(2);
             this.numPita.Name = "numPita";
             this.numPita.Size = new System.Drawing.Size(41, 27);
             this.numPita.TabIndex = 103;
@@ -628,7 +667,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(248, 155);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(164, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -641,7 +680,7 @@
             this.panel2.Controls.Add(this.label17);
             this.panel2.ForeColor = System.Drawing.Color.Transparent;
             this.panel2.Location = new System.Drawing.Point(177, -12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1169, 105);
             this.panel2.TabIndex = 142;
@@ -658,12 +697,25 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "FOOD";
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Font = new System.Drawing.Font("Montserrat", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Location = new System.Drawing.Point(894, 631);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(278, 46);
+            this.btnPrint.TabIndex = 143;
+            this.btnPrint.Text = "PRINT";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // frmFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1199, 687);
+            this.ClientSize = new System.Drawing.Size(1199, 739);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtCash);
@@ -702,9 +754,9 @@
             this.Controls.Add(this.numPita);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.Black;
+            this.ForeColor = System.Drawing.Color.Indigo;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FOOD";
@@ -780,5 +832,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnShutdown;
+        private System.Windows.Forms.Button BtnSignout;
     }
 }

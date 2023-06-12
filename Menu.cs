@@ -75,19 +75,6 @@ namespace EATS2GOV2
             form3.Show();
             this.Hide();
         }
-
-        private void picShutdown_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void picsignOut_Click_1(object sender, EventArgs e)
-        {
-            frmLogin form1 = new frmLogin();
-            form1.Show();
-            this.Hide();
-        }
-
         private void btnFood_Click(object sender, EventArgs e)
         {
             frmFood food = new frmFood();
@@ -107,6 +94,18 @@ namespace EATS2GOV2
             frmDessert Dessert = new frmDessert();
             Dessert.Show();
             this.Hide();
+        }
+
+        private void BtnSignout_Click_1(object sender, EventArgs e)
+        {
+            frmLogin form1 = new frmLogin();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void btnShutdown_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

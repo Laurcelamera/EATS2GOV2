@@ -66,48 +66,6 @@ namespace EATS2GOV2
             txtReceipt.AppendText($"Unit Price: ₱{unitPrice}{Environment.NewLine}");
             txtReceipt.AppendText($"Total Price: ₱{totalPrice}{Environment.NewLine}");
         }
-        private void btnPita_Click(object sender, EventArgs e)
-        {
-            int quantity = Convert.ToInt32(numPita.Value);
-            pitaTotalPrice = pitaPrice * quantity;
-            totalOrderPrice = pitaTotalPrice;
-            AddItemToReceipt("EATS2GO Pita Wraps", quantity, pitaPrice, pitaTotalPrice);
-        }
-        private void btnSand_Click(object sender, EventArgs e)
-        {
-            int quantity = Convert.ToInt32(numSand.Value);
-            sandTotalPrice = sandPrice * quantity;
-            totalOrderPrice = sandTotalPrice;
-            AddItemToReceipt("EATS2GO Sandwich", quantity, sandPrice, sandTotalPrice);
-        }
-        private void btnTaco_Click(object sender, EventArgs e)
-        {
-            int quantity = Convert.ToInt32(numTaco.Value);
-            tacoTotalPrice = tacoPrice * quantity;
-            totalOrderPrice = tacoTotalPrice;
-            AddItemToReceipt("EATS2GO TACO", quantity, tacoPrice, tacoTotalPrice);
-        }
-        private void btnEgg_Click(object sender, EventArgs e)
-        {
-            int quantity = Convert.ToInt32(numEgg.Value);
-            eggdropTotalPrice = eggdropPrice * quantity;
-            totalOrderPrice = eggdropTotalPrice;
-            AddItemToReceipt("EGG DROP SANDWICH", quantity, eggdropPrice, eggdropTotalPrice);
-        }
-        private void btnPesto_Click(object sender, EventArgs e)
-        {
-            int quantity = Convert.ToInt32(numPesto.Value);
-            pestoTotalPrice = pestoPrice * quantity;
-            totalOrderPrice = pestoTotalPrice;
-            AddItemToReceipt("EATS2GO CHICKEN PESTO", quantity, pestoPrice, pestoTotalPrice);
-        }
-        private void btnCornD_Click(object sender, EventArgs e)
-        {
-            int quantity = Convert.ToInt32(numCornd.Value);
-            corndogTotalPrice = corndogPrice * quantity;
-            totalOrderPrice = corndogTotalPrice;
-            AddItemToReceipt("CORN DOG", quantity, corndogPrice, corndogTotalPrice);
-        }
         private double CalculateTotalOrderPrice()
         {
             double totalOrderPrice = 0;
@@ -138,9 +96,99 @@ namespace EATS2GOV2
 
             return totalOrderPrice;
         }
-        private void btnCompleteOrder_Click(object sender, EventArgs e)
+        public frmFood()
         {
+            InitializeComponent();
+        }
+        private void frmFood_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+        private void InsertItemToDatabase(string item, int quantity, double price)
+        {
+            // Insert into the database
+            using (MySqlConnection connection = GetConnection())
+            {
+                
+                string query = "INSERT INTO sales (item_name, price, quantity, transaction_date) VALUES (@itemName, @price, @quantity, @transactionDate)";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                if (quantity > 0)
+                {
+                    command.Parameters.AddWithValue("@itemName", item);
+                    command.Parameters.AddWithValue("@price", price);
+                    command.Parameters.AddWithValue("@quantity", quantity);
+                    command.Parameters.AddWithValue("@transactionDate", DateTime.Now);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
 
+        private void btnPita_Click_1(object sender, EventArgs e)
+        {
+            int quantity = Convert.ToInt32(numPita.Value);
+            pitaTotalPrice = pitaPrice * quantity;
+            totalOrderPrice = pitaTotalPrice;
+            AddItemToReceipt("EATS2GO Pita Wraps", quantity, pitaPrice, pitaTotalPrice);
+        }
+
+        private void btnSand_Click_1(object sender, EventArgs e)
+        {
+            int quantity = Convert.ToInt32(numSand.Value);
+            sandTotalPrice = sandPrice * quantity;
+            totalOrderPrice = sandTotalPrice;
+            AddItemToReceipt("EATS2GO Sandwich", quantity, sandPrice, sandTotalPrice);
+        }
+
+        private void btnTaco_Click_1(object sender, EventArgs e)
+        {
+            int quantity = Convert.ToInt32(numTaco.Value);
+            tacoTotalPrice = tacoPrice * quantity;
+            totalOrderPrice = tacoTotalPrice;
+            AddItemToReceipt("EATS2GO TACO", quantity, tacoPrice, tacoTotalPrice);
+        }
+
+        private void btnEgg_Click_1(object sender, EventArgs e)
+        {
+            int quantity = Convert.ToInt32(numEgg.Value);
+            eggdropTotalPrice = eggdropPrice * quantity;
+            totalOrderPrice = eggdropTotalPrice;
+            AddItemToReceipt("EGG DROP SANDWICH", quantity, eggdropPrice, eggdropTotalPrice);
+        }
+
+        private void btnPesto_Click_1(object sender, EventArgs e)
+        {
+            int quantity = Convert.ToInt32(numPesto.Value);
+            pestoTotalPrice = pestoPrice * quantity;
+            totalOrderPrice = pestoTotalPrice;
+            AddItemToReceipt("EATS2GO CHICKEN PESTO", quantity, pestoPrice, pestoTotalPrice);
+        }
+
+        private void btnCornd_Click_1(object sender, EventArgs e)
+        {
+            int quantity = Convert.ToInt32(numCornd.Value);
+            corndogTotalPrice = corndogPrice * quantity;
+            totalOrderPrice = corndogTotalPrice;
+            AddItemToReceipt("CORN DOG", quantity, corndogPrice, corndogTotalPrice);
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            txtReceipt.Clear();
+            txtReceipt.AppendText(headerText);
+            txtReceipt.AppendText(lineOfAsterisks);
+            totalOrderPrice = 0;
+        }
+
+        private void btnTotal_Click_1(object sender, EventArgs e)
+        {
+            double totalOrderPrice = CalculateTotalOrderPrice();
+            txtReceipt.AppendText(Environment.NewLine);
+            txtReceipt.AppendText("Total Order Price: ₱" + totalOrderPrice + Environment.NewLine);
+            txtReceipt.AppendText(lineOfAsterisks);
+        }
+
+        private void btnCompleteOrder_Click_1(object sender, EventArgs e)
+        {
             double totalOrderPrice = CalculateTotalOrderPrice();
             txtReceipt.AppendText(Environment.NewLine);
             txtReceipt.AppendText("Total Order Price: ₱" + totalOrderPrice.ToString("0.00") + Environment.NewLine);
@@ -171,71 +219,26 @@ namespace EATS2GOV2
             InsertItemToDatabase("EATS2GO CHICKEN PESTO", Convert.ToInt32(numPesto.Value), pestoPrice);
             InsertItemToDatabase("CORN DOG", Convert.ToInt32(numCornd.Value), corndogPrice);
 
-            frmSales salesForm = new frmSales();
-            salesForm.Show();
-
         }
-
-        private void btnTotal_Click(object sender, EventArgs e)
-        {
-            double totalOrderPrice = CalculateTotalOrderPrice();
-            txtReceipt.AppendText(Environment.NewLine);
-            txtReceipt.AppendText("Total Order Price: ₱" + totalOrderPrice + Environment.NewLine);
-            txtReceipt.AppendText(lineOfAsterisks);
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            txtReceipt.Clear();
-            txtReceipt.AppendText(headerText);
-            txtReceipt.AppendText(lineOfAsterisks);
-            totalOrderPrice = 0;
-        }
-
-        public frmFood()
-        {
-            InitializeComponent();
-        }
-        private void frmFood_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            frmMain frmMain = new frmMain();
-            frmMain.Show();
-            this.Hide();
-        }
-        private void btnDrinks_Click(object sender, EventArgs e)
+        private void btnDrinks_Click_1(object sender, EventArgs e)
         {
             frmBeverages Drinks = new frmBeverages();
             Drinks.Show();
             this.Hide();
         }
-        private void DESSERT_Click(object sender, EventArgs e)
+
+        private void DESSERT_Click_1(object sender, EventArgs e)
         {
             frmDessert Dessert = new frmDessert();
             Dessert.Show();
             this.Hide();
         }
 
-        private void InsertItemToDatabase(string item, int quantity, double price)
+        private void btnDashboard_Click_1(object sender, EventArgs e)
         {
-            // Insert into the database
-            using (MySqlConnection connection = GetConnection())
-            {
-                
-                string query = "INSERT INTO sales (item_name, price, quantity, transaction_date) VALUES (@itemName, @price, @quantity, @transactionDate)";
-                MySqlCommand command = new MySqlCommand(query, connection);
-                if (quantity > 0)
-                {
-                    command.Parameters.AddWithValue("@itemName", item);
-                    command.Parameters.AddWithValue("@price", price);
-                    command.Parameters.AddWithValue("@quantity", quantity);
-                    command.Parameters.AddWithValue("@transactionDate", DateTime.Now);
-                    command.ExecuteNonQuery();
-                }
-            }
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
+            this.Hide();
         }
     }
 }

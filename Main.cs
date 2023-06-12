@@ -16,34 +16,6 @@ namespace EATS2GOV2
         {
             InitializeComponent();
         }
-        private void picShutdown_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void btnInventory_Click(object sender, EventArgs e)
-        {
-            frmInventory form3 = new frmInventory();
-            form3.Show();
-            this.Hide();
-        }
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            frmLogin form1 = new frmLogin();
-            form1.Show();
-            this.Hide();
-        }
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            frmMenu form4 = new frmMenu();
-            form4.Show();
-            this.Hide();
-        }
-        private void btnSales_Click(object sender, EventArgs e)
-        {
-            frmSales form5 = new frmSales();
-            form5.Show();
-            this.Hide();
-        }
         private void picsignOut_Click(object sender, EventArgs e)
         {
             frmLogin form1 = new frmLogin();
@@ -55,12 +27,37 @@ namespace EATS2GOV2
         {
             Application.Exit();
         }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void btnPOS_Click(object sender, EventArgs e)
         {
-            frmMain frmMain = new frmMain();
-            frmMain.Show();
+            frmMenu form4 = new frmMenu();
+            form4.Show();
             this.Hide();
+        }
+
+        private void btnInventory_Click_1(object sender, EventArgs e)
+        {
+            frmInventory form3 = new frmInventory();
+            form3.Show();
+            this.Hide();
+        }
+
+        private void btnSales_Click_1(object sender, EventArgs e)
+        {
+            frmSales form5 = new frmSales();
+            form5.Show();
+            this.Hide();
+        }
+
+        private void BtnSignout_Click_1(object sender, EventArgs e)
+        {
+            frmLogin form1 = new frmLogin();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void btnShutdown_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -218,27 +218,37 @@ namespace EATS2GOV2
                 }
             }
         }
-        private void btnFood_Click(object sender, EventArgs e)
+        private void btnFood_Click_1(object sender, EventArgs e)
         {
-            frmSales food = new frmSales();
+            frmFood food = new frmFood();
             food.Show();
             this.Hide();
         }
-        private void btnDrinks_Click(object sender, EventArgs e)
+
+        private void btnDrinks_Click_1(object sender, EventArgs e)
         {
             frmBeverages Drinks = new frmBeverages();
             Drinks.Show();
             this.Hide();
         }
-        private void btnDashboard_Click(object sender, EventArgs e)
+
+        private void DESSERT_Click(object sender, EventArgs e)
         {
             frmMain frmMain = new frmMain();
             frmMain.Show();
             this.Hide();
         }
+
         private void frmDessert_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            frmMain frmMain = new frmMain();
+            frmMain.Show();
+            this.Hide();
         }
     }
 }

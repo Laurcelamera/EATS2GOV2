@@ -23,7 +23,7 @@ namespace EATS2GOV2
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            if (txtUsername.Text == "admin" && txtPassword.Text == "eats2go")
+            if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
             {
                 MessageBox.Show("Welcome Admin!");
                 frmMain form2 = new frmMain();

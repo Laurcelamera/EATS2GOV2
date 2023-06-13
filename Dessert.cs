@@ -13,6 +13,15 @@ namespace EATS2GOV2
 {
     public partial class frmDessert : Form
     {
+        public frmDessert()
+        {
+            InitializeComponent();
+            printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocument_PrintPage;
+
+            printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = printDocument;
+        }
         private PrintDocument printDocument;
         private PrintPreviewDialog printPreviewDialog;
         public string connectionString =
@@ -37,21 +46,14 @@ namespace EATS2GOV2
                 return null;
             }
         }
-        public frmDessert()
-        {
-            InitializeComponent();
-            printDocument = new PrintDocument();
-            printDocument.PrintPage += PrintDocument_PrintPage;
-
-            printPreviewDialog = new PrintPreviewDialog();
-            printPreviewDialog.Document = printDocument;
-        }
+       //Prices for Dessert Items
         private double halohaloPrice =150.00;
         private double carSundaePrice = 40.00;
         private double strawSundaePrice = 40.00;
         private double chCakePrice = 65.00;
         private double bluPiePrice = 65.00;
         private double bTartPrice = 30.00;
+        //Total Price for Dessert Items
         private double halohaloTotalPrice;
         private double carSundaeTotalPrice;
         private double strawSundaeTotalPrice;
@@ -59,10 +61,10 @@ namespace EATS2GOV2
         private double bluPieTotalPrice;
         private double bTartTotalPrice;
         private double totalOrderPrice = 0;
-
+        // Header and line separator for the receipt
         private string headerText = "\t\tEATS2GO FOODS" + Environment.NewLine;
         private string lineOfAsterisks = "\t************************************************" + Environment.NewLine;
-
+        //Form Load
         private void frmDessert_Load(object sender, EventArgs e)
         {
             txtReceipt.ReadOnly = true;
@@ -70,6 +72,7 @@ namespace EATS2GOV2
             txtReceipt.AppendText(headerText);
             txtReceipt.AppendText(lineOfAsterisks);
         }
+        // Method to add an item to the receipt(receipt textbox)
         private void AddItemToReceipt(string item, int quantity, double unitPrice, double totalPrice)
         {
             txtReceipt.AppendText(Environment.NewLine);
@@ -78,7 +81,7 @@ namespace EATS2GOV2
             txtReceipt.AppendText($"Unit Price: ₱{unitPrice}{Environment.NewLine}");
             txtReceipt.AppendText($"Total Price: ₱{totalPrice}{Environment.NewLine}");
         }
-
+        //Event For Dessert Items(Order)
         private void btnHalo_Click(object sender, EventArgs e)
         {
             int quantity = Convert.ToInt32(numHalo.Value);
@@ -86,7 +89,6 @@ namespace EATS2GOV2
             totalOrderPrice = halohaloTotalPrice;
             AddItemToReceipt("HALO-HALO", quantity, halohaloPrice, halohaloTotalPrice);
         }
-
         private void btnCaSundae_Click(object sender, EventArgs e)
         {
             int quantity = Convert.ToInt32(numCaSundae.Value);
@@ -94,16 +96,13 @@ namespace EATS2GOV2
             totalOrderPrice = carSundaeTotalPrice;
             AddItemToReceipt("CARAMEL SUNDAE", quantity, carSundaePrice, carSundaeTotalPrice);
         }
-
         private void btnStSundae_Click(object sender, EventArgs e)
         {
             int quantity = Convert.ToInt32(numStSundae.Value);
             strawSundaeTotalPrice = strawSundaePrice * quantity;
             totalOrderPrice = strawSundaeTotalPrice;
             AddItemToReceipt("STRAWBERRY SUNDAE", quantity, strawSundaePrice, strawSundaeTotalPrice);
-
         }
-
         private void btnCheese_Click(object sender, EventArgs e)
         {
             int quantity = Convert.ToInt32(numChCake.Value);
@@ -111,7 +110,6 @@ namespace EATS2GOV2
             totalOrderPrice = chCakeTotalPrice;
             AddItemToReceipt("CHEESE CAKE", quantity, chCakePrice, chCakeTotalPrice);
         }
-
         private void btnBpie_Click(object sender, EventArgs e)
         {
             int quantity = Convert.ToInt32(numBlPie.Value);
@@ -119,52 +117,43 @@ namespace EATS2GOV2
             totalOrderPrice = bluPieTotalPrice;
             AddItemToReceipt("BLUEBERRY PIE", quantity, bluPiePrice, bluPieTotalPrice);
         }
-
         private void btnBtarts_Click(object sender, EventArgs e)
         {
             int quantity = Convert.ToInt32(numBtarts.Value);
             bTartTotalPrice = bTartPrice * quantity;
             totalOrderPrice = bTartTotalPrice;
             AddItemToReceipt("BUTTER TARTS", quantity, bTartPrice, bTartTotalPrice);
-
         }
+        //Method to calculate the total order price
         private double CalculateTotalOrderPrice()
         {
             double totalOrderPrice = 0;
-
             int halohaloQuantity = Convert.ToInt32(numHalo.Value);
             double halohaloTotalPrice = halohaloPrice * halohaloQuantity;
             totalOrderPrice += halohaloTotalPrice;
-
             int carSundaeQuantity = Convert.ToInt32(numCaSundae.Value);
             double carSundaeTotalPrice = carSundaePrice * carSundaeQuantity;
             totalOrderPrice += carSundaeTotalPrice;
-
             int strawSundaeQuantity = Convert.ToInt32(numStSundae.Value);
             double strawSundaeTotalPrice = strawSundaePrice * strawSundaeQuantity;
             totalOrderPrice += strawSundaeTotalPrice;
-
             int chCakeQuantity = Convert.ToInt32(numChCake.Value);
             double chCakeTotalPrice = chCakePrice * chCakeQuantity;
             totalOrderPrice += chCakeTotalPrice;
-
             int bluePieQuantity = Convert.ToInt32(numBlPie.Value);
             double bluePieTotalPrice = bluPiePrice * bluePieQuantity;
             totalOrderPrice += bluePieTotalPrice;
-
             int bTartQuantity = Convert.ToInt32(numBtarts.Value);
             double bTartTotalPrice = bTartPrice * bTartQuantity;
             totalOrderPrice += bTartTotalPrice;
-
             return totalOrderPrice;
         }
-
+        //Clear All
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtReceipt.Clear();
             txtReceipt.AppendText(headerText);
             txtReceipt.AppendText(lineOfAsterisks);
-
             // Clear numeric up-down controls
             numHalo.Value = 0;
             numCaSundae.Value = 0;
@@ -175,7 +164,7 @@ namespace EATS2GOV2
             txtCash.Clear();
             totalOrderPrice = 0;
         }
-
+        //Event to SHow Total   
         private void btnTotal_Click(object sender, EventArgs e)
         {
             double totalOrderPrice = CalculateTotalOrderPrice();
@@ -183,7 +172,7 @@ namespace EATS2GOV2
             txtReceipt.AppendText("Total Order Price: ₱" + totalOrderPrice + Environment.NewLine);
             txtReceipt.AppendText(lineOfAsterisks);
         }
-
+        //Event to Complete Order
         private void btnCompleteOrder_Click(object sender, EventArgs e)
         {
             double totalOrderPrice = CalculateTotalOrderPrice();
@@ -195,25 +184,23 @@ namespace EATS2GOV2
                 MessageBox.Show("Invalid cash input. Please enter a valid amount.");
                 return;
             }
-
             double change = cashInput - totalOrderPrice;
-
             txtReceipt.AppendText("Cash Input: ₱" + cashInput.ToString("0.00") + Environment.NewLine);
             if (change >= 0)
             {
                 txtReceipt.AppendText("Change: ₱" + change.ToString("0.00") + Environment.NewLine);
+                InsertItemToDatabase("HALO-HALO", Convert.ToInt32(numHalo.Value), halohaloPrice);
+                InsertItemToDatabase("CARAMEL SUNDAE", Convert.ToInt32(numCaSundae.Value), carSundaePrice);
+                InsertItemToDatabase("STRAWBERRY SUNDAE", Convert.ToInt32(numStSundae.Value), strawSundaePrice);
+                InsertItemToDatabase("CHEESE CAKE", Convert.ToInt32(numChCake.Value), chCakePrice);
+                InsertItemToDatabase("BLUEBERRY PIE", Convert.ToInt32(numBlPie.Value), bluPiePrice);
+                InsertItemToDatabase("BUTTER TARTS", Convert.ToInt32(numBtarts.Value), bTartPrice);
             }
             else
             {
                 txtReceipt.AppendText("Insufficient cash. Please provide more funds." + Environment.NewLine);
             }
             txtReceipt.AppendText(lineOfAsterisks);
-            InsertItemToDatabase("HALO-HALO", Convert.ToInt32(numHalo.Value), halohaloPrice);
-            InsertItemToDatabase("CARAMEL SUNDAE", Convert.ToInt32(numCaSundae.Value), carSundaePrice);
-            InsertItemToDatabase("STRAWBERRY SUNDAE", Convert.ToInt32(numStSundae.Value), strawSundaePrice);
-            InsertItemToDatabase("CHEESE CAKE", Convert.ToInt32(numChCake.Value), chCakePrice);
-            InsertItemToDatabase("BLUEBERRY PIE", Convert.ToInt32(numBlPie.Value), bluPiePrice);
-            InsertItemToDatabase("BUTTER TARTS", Convert.ToInt32(numBtarts.Value), bTartPrice);
         }
         private void InsertItemToDatabase(string item, int quantity, double price)
         {
@@ -232,38 +219,32 @@ namespace EATS2GOV2
                 }
             }
         }
+        //Navigate to Food form
         private void btnFood_Click_1(object sender, EventArgs e)
         {
             frmFood food = new frmFood();
             food.Show();
             this.Hide();
         }
-
+        //Navigate to Drinks
         private void btnDrinks_Click_1(object sender, EventArgs e)
         {
             frmBeverages Drinks = new frmBeverages();
             Drinks.Show();
             this.Hide();
         }
-
-        private void DESSERT_Click(object sender, EventArgs e)
-        {
-            frmMain frmMain = new frmMain();
-            frmMain.Show();
-            this.Hide();
-        }
-
         private void frmDessert_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-
+        //Navigate to Dashboard
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             frmMain frmMain = new frmMain();
             frmMain.Show();
             this.Hide();
         }
+        // Event for printing the receipt
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
             // Define the content and layout of the printed receipt
@@ -282,6 +263,7 @@ namespace EATS2GOV2
                 currentY += lineHeight;
             }
         }
+        // Event for printing the receipt
         private void btnPrint_Click(object sender, EventArgs e)
         {
             PrintDocument printDocument = new PrintDocument();
@@ -295,14 +277,13 @@ namespace EATS2GOV2
 
             printPreviewDialog.ShowDialog();
         }
-
+        //Close Form
         private void BtnSignout_Click(object sender, EventArgs e)
         {
             frmLogin form1 = new frmLogin();
             form1.Show();
             this.Hide();
         }
-
         private void btnShutdown_Click(object sender, EventArgs e)
         {
             Application.Exit();

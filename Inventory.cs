@@ -20,11 +20,11 @@ namespace EATS2GOV2
         "password='';");
         MySqlCommand cmd;
         MySqlDataReader rdr;
-
         public frmInventory()
         {
             InitializeComponent();
         }
+        // Method to load inventory data from the database and insert data into the data grid view
         private void LoadInventory()
         {
             dataIngredients.Rows.Clear();
@@ -34,10 +34,11 @@ namespace EATS2GOV2
             while (rdr.Read())
             {
                 dataIngredients.Rows.Add(rdr.GetString(0), rdr.GetString(1),
-                    rdr.GetString(2), rdr.GetString(3), rdr.GetString(4),rdr.GetString(5), rdr.GetString(6), rdr.GetString(7));
+                    rdr.GetString(2), rdr.GetString(3), rdr.GetString(4), rdr.GetString(5), rdr.GetString(6), rdr.GetString(7));
             }
             conn.Close();
         }
+        // Method to load the menu data from the database and insert data into the data grid view
         private void LoadMenu()
         {
             dataMenu.Rows.Clear();
@@ -51,17 +52,20 @@ namespace EATS2GOV2
             }
             conn.Close();
         }
+        // Load Form
         private void frmInventory_Load(object sender, EventArgs e)
         {
             LoadInventory();
             LoadMenu();
         }
+        // Event for the "To Main" button (Go back to Dashboard)
         private void btnToMain_Click(object sender, EventArgs e)
         {
             frmMain form2 = new frmMain();
             form2.Show();
             this.Hide();
         }
+        // Method to clear all input fields
         private void ClearAll()
         {
             txtItemID.Clear();
@@ -78,18 +82,20 @@ namespace EATS2GOV2
             txtItemPrice2.Clear();
             txtItemQuantity2.Clear();
         }
+        // Event handler for the "Add" button (Insert data in the Inventory)
         private void btnAdd_Click(object sender, EventArgs e)
         {
             conn.Open();
             cmd = new MySqlCommand("INSERT INTO INVENTORY(itemName, itemType, itemCost, itemQuantity, itemExpiry, itemReceivedDate, itemSupplier) " +
-                "VALUES('" + txtItemName.Text + "','" + txtItemType.Text + "','" + txtItemPrice.Text + "','" + txtItemQuantity.Text + "', '"+txtItemExp.Text+
-                "', '"+txtItemRecDate.Text+"', '"+txtItemSup.Text+"');", conn);
+                "VALUES('" + txtItemName.Text + "','" + txtItemType.Text + "','" + txtItemPrice.Text + "','" + txtItemQuantity.Text + "', '" + txtItemExp.Text +
+                "', '" + txtItemRecDate.Text + "', '" + txtItemSup.Text + "');", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Item Added Successfully!, Success");
+            MessageBox.Show("Item Added Successfully!", "Success");
             LoadInventory();
             ClearAll();
         }
+        // Inventory data grid view selection changed event
         private void dataInventory_SelectionChanged_1(object sender, EventArgs e)
         {
             if (dataIngredients.SelectedRows.Count > 0)
@@ -104,6 +110,7 @@ namespace EATS2GOV2
                 txtItemSup.Text = dataIngredients.SelectedRows[0].Cells[7].Value.ToString();
             }
         }
+        // Event for the "Save" button (Update Item on Inventory)
         private void btnSave_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -112,9 +119,9 @@ namespace EATS2GOV2
                 "itemType = '" + txtItemType.Text + "', " +
                 "itemCost = '" + txtItemPrice.Text + "', " +
                 "itemQuantity = '" + txtItemQuantity.Text + "', " +
-                "itemExpiry = '"+txtItemExp.Text+"', " +
-                "itemReceivedDate = '"+txtItemRecDate.Text+"', " +
-                "itemSupplier = '"+txtItemSup.Text+"' " +
+                "itemExpiry = '" + txtItemExp.Text + "', " +
+                "itemReceivedDate = '" + txtItemRecDate.Text + "', " +
+                "itemSupplier = '" + txtItemSup.Text + "' " +
                 "WHERE ID = '" + txtItemID.Text + "';", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -122,7 +129,7 @@ namespace EATS2GOV2
             LoadInventory();
             ClearAll();
         }
-
+        // Event for the "Delete" button (Delete Item in the Inventory)
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataIngredients.SelectedRows.Count > 0)
@@ -136,18 +143,19 @@ namespace EATS2GOV2
                 ClearAll();
             }
         }
+        // Event for the "Add" (Inserts item into the menu)
         private void btnAdd2_Click(object sender, EventArgs e)
         {
             conn.Open();
             cmd = new MySqlCommand("INSERT INTO Menu(ItemName, itemType, itemPrice, itemQuantity) " +
-            "VALUES('" + txtItemName2.Text + "','" + txtItemType2.Text + "','" + txtItemPrice2.Text + "','"
-            + txtItemQuantity2.Text + "')", conn);
+            "VALUES('" + txtItemName2.Text + "','" + txtItemType2.Text + "','" + txtItemPrice2.Text + "','" + txtItemQuantity2.Text + "')", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("Item Added Successfully!, Success");
+            MessageBox.Show("Item Added Successfully!", "Success");
             LoadMenu();
             ClearAll();
         }
+        // Menu data grid view selection changed event
         private void dataMenu_SelectionChanged(object sender, EventArgs e)
         {
             if (dataMenu.SelectedRows.Count > 0)
@@ -159,6 +167,7 @@ namespace EATS2GOV2
                 txtItemQuantity2.Text = dataMenu.SelectedRows[0].Cells[4].Value.ToString();
             }
         }
+        // Event  for the "Save" button (Updates the record on Menu)
         private void btnSave2_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -166,7 +175,7 @@ namespace EATS2GOV2
                 "ItemName = '" + txtItemName2.Text + "', " +
                 "itemType = '" + txtItemType2.Text + "', " +
                 "itemPrice = '" + txtItemPrice2.Text + "', " +
-                "itemQuantity = '" + txtItemQuantity2.Text + "'" +
+                "itemQuantity = '" + txtItemQuantity2.Text + "' " +
                 "WHERE ID = '" + txtItemID2.Text + "';", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -174,6 +183,7 @@ namespace EATS2GOV2
             LoadMenu();
             ClearAll();
         }
+        // Event for the "Delete" button (Deletes the record on Menu)
         private void btnDelete2_Click(object sender, EventArgs e)
         {
             if (dataMenu.SelectedRows.Count > 0)
@@ -186,6 +196,7 @@ namespace EATS2GOV2
                 LoadMenu();
                 ClearAll();
             }
+            //Close Form
         }
         private void frmInventory_FormClosed(object sender, FormClosedEventArgs e)
         {

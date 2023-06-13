@@ -598,7 +598,7 @@
             this.DESSERT.TabIndex = 15;
             this.DESSERT.Text = "DESSERT";
             this.DESSERT.UseVisualStyleBackColor = false;
-            this.DESSERT.Click += new System.EventHandler(this.DESSERT_Click);
+          //  this.DESSERT.Click += new System.EventHandler(this.DESSERT_Click);
             // 
             // btnDrinks
             // 

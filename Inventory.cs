@@ -33,8 +33,22 @@ namespace EATS2GOV2
             rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
+                // Add the retrieved data to the dataIngredients DataGridView
                 dataIngredients.Rows.Add(rdr.GetString(0), rdr.GetString(1),
                     rdr.GetString(2), rdr.GetString(3), rdr.GetString(4), rdr.GetString(5), rdr.GetString(6), rdr.GetString(7));
+                // Retrieve item information from the reader
+                string itemName = rdr.GetString(1);
+                string itemType = rdr.GetString(2);
+                string itemQuantity = rdr.GetString(4);
+                int quantityThreshold = 10; // Set the threshold for low inventory quantity
+                if (int.Parse(itemQuantity) < quantityThreshold)
+                {
+                    string message = "Item Name: " + itemName + "\n";
+                    message += "Item Type: " + itemType + "\n";
+                    message += "Current Quantity: " + itemQuantity + "\n";
+                    message += "Please reorder supplies for this item.";
+                    MessageBox.Show(message, "Low Inventory Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             conn.Close();
         }
@@ -49,6 +63,20 @@ namespace EATS2GOV2
             {
                 dataMenu.Rows.Add(rdr.GetString(0), rdr.GetString(1),
                     rdr.GetString(2), rdr.GetString(3), rdr.GetString(4));
+                string itemName = rdr.GetString(1);
+                string itemType = rdr.GetString(2);
+                string itemQuantity = rdr.GetString(4);
+
+                int quantityThreshold = 12; // Set the threshold for low inventory quantity
+                if (int.Parse(itemQuantity) < quantityThreshold)
+                {
+                    string message = "Item Name: " + itemName + "\n";
+                    message += "Item Type: " + itemType + "\n";
+                    message += "Current Quantity: " + itemQuantity + "\n";
+                    message += "Please reorder supplies for this item.";
+
+                    MessageBox.Show(message, "Low Inventory Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             conn.Close();
         }

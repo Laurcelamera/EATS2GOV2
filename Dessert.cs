@@ -62,8 +62,8 @@ namespace EATS2GOV2
         private double bTartTotalPrice;
         private double totalOrderPrice = 0;
         // Header and line separator for the receipt
-        private string headerText = "\t\tEATS2GO FOODS" + Environment.NewLine;
-        private string lineOfAsterisks = "\t************************************************" + Environment.NewLine;
+        private string headerText = "\t\tEATS2GO FOODS" + "\n";
+        private string lineOfAsterisks = "\t************************************************" + "\n";
         //Form Load
         private void frmDessert_Load(object sender, EventArgs e)
         {
@@ -75,11 +75,11 @@ namespace EATS2GOV2
         // Method to add an item to the receipt(receipt textbox)
         private void AddItemToReceipt(string item, int quantity, double unitPrice, double totalPrice)
         {
-            txtReceipt.AppendText(Environment.NewLine);
-            txtReceipt.AppendText($"Item: {item}{Environment.NewLine}");
-            txtReceipt.AppendText($"Quantity: {quantity}{Environment.NewLine}");
-            txtReceipt.AppendText($"Unit Price: ₱{unitPrice}{Environment.NewLine}");
-            txtReceipt.AppendText($"Total Price: ₱{totalPrice}{Environment.NewLine}");
+            txtReceipt.AppendText("\n");
+            txtReceipt.AppendText($"Item: {item}{"\n"}");
+            txtReceipt.AppendText($"Quantity: {quantity}{"\n"}");
+            txtReceipt.AppendText($"Unit Price: ₱{unitPrice}{"\n"}");
+            txtReceipt.AppendText($"Total Price: ₱{totalPrice}{"\n"}");
         }
         //Event For Dessert Items(Order)
         private void btnHalo_Click(object sender, EventArgs e)
@@ -168,16 +168,16 @@ namespace EATS2GOV2
         private void btnTotal_Click(object sender, EventArgs e)
         {
             double totalOrderPrice = CalculateTotalOrderPrice();
-            txtReceipt.AppendText(Environment.NewLine);
-            txtReceipt.AppendText("Total Order Price: ₱" + totalOrderPrice + Environment.NewLine);
+            txtReceipt.AppendText("\n");
+            txtReceipt.AppendText("Total Order Price: ₱" + totalOrderPrice + "\n");
             txtReceipt.AppendText(lineOfAsterisks);
         }
         //Event to Complete Order
         private void btnCompleteOrder_Click(object sender, EventArgs e)
         {
             double totalOrderPrice = CalculateTotalOrderPrice();
-            txtReceipt.AppendText(Environment.NewLine);
-            txtReceipt.AppendText("Total Order Price: ₱" + totalOrderPrice.ToString("0.00") + Environment.NewLine);
+            txtReceipt.AppendText("\n");
+            txtReceipt.AppendText("Total Order Price: ₱" + totalOrderPrice.ToString("0.00") + "\n");
             double cashInput;
             if (!double.TryParse(txtCash.Text, out cashInput))
             {
@@ -185,10 +185,10 @@ namespace EATS2GOV2
                 return;
             }
             double change = cashInput - totalOrderPrice;
-            txtReceipt.AppendText("Cash Input: ₱" + cashInput.ToString("0.00") + Environment.NewLine);
+            txtReceipt.AppendText("Cash Input: ₱" + cashInput.ToString("0.00") + "\n");
             if (change >= 0)
             {
-                txtReceipt.AppendText("Change: ₱" + change.ToString("0.00") + Environment.NewLine);
+                txtReceipt.AppendText("Change: ₱" + change.ToString("0.00") + "\n");
                 InsertItemToDatabase("HALO-HALO", Convert.ToInt32(numHalo.Value), halohaloPrice);
                 InsertItemToDatabase("CARAMEL SUNDAE", Convert.ToInt32(numCaSundae.Value), carSundaePrice);
                 InsertItemToDatabase("STRAWBERRY SUNDAE", Convert.ToInt32(numStSundae.Value), strawSundaePrice);
@@ -198,7 +198,7 @@ namespace EATS2GOV2
             }
             else
             {
-                txtReceipt.AppendText("Insufficient cash. Please provide more funds." + Environment.NewLine);
+                txtReceipt.AppendText("Insufficient cash. Please provide more funds." + "\n");
             }
             txtReceipt.AppendText(lineOfAsterisks);
         }
@@ -256,7 +256,7 @@ namespace EATS2GOV2
             string receiptContent = txtReceipt.Text;
 
             // Print each line of the receipt
-            string[] lines = receiptContent.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            string[] lines = receiptContent.Split(new[] { "\n" }, StringSplitOptions.None);
             foreach (string line in lines)
             {
                 e.Graphics.DrawString(line, font, brush, 0, currentY);

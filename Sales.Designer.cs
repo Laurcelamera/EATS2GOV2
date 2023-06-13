@@ -45,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotalSales = new System.Windows.Forms.TextBox();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataSales)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -234,13 +235,27 @@
             this.txtTotalSales.Size = new System.Drawing.Size(141, 36);
             this.txtTotalSales.TabIndex = 24;
             // 
+            // btnExport
+            // 
+            this.btnExport.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.Black;
+            this.btnExport.Location = new System.Drawing.Point(442, 547);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(251, 66);
+            this.btnExport.TabIndex = 25;
+            this.btnExport.Text = "EXPORT";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // frmSales
             // 
             this.AcceptButton = this.btnFilter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1129, 602);
+            this.ClientSize = new System.Drawing.Size(1129, 641);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.txtTotalSales);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -286,5 +301,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn transaction_date;
+        private System.Windows.Forms.Button btnExport;
     }
 }
